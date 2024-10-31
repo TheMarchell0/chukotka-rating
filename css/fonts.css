@@ -1,0 +1,50 @@
+/*HeliosExt*/
+
+@font-face {
+    font-family: "HeliosExt";
+    src: local("HeliosExt"),
+    url("../fonts/HeliosExt/HeliosExt_Bold.woff2") format("woff2"),
+    url("../fonts/HeliosExt/HeliosExt_Bold.woff") format("woff"),
+    url("../fonts/HeliosExt/HeliosExt_Bold.ttf") format("ttf"),
+    url("../fonts/HeliosExt/HeliosExt_Bold.svg#HeliosExt") format("svg");
+    font-weight: 700;
+    font-style: normal;
+}
+
+/*TT Firs Neue Trial Var Roman*/
+
+@font-face {
+    font-family: "TT Firs Neue Trial Var Roman";
+    src: local("TT Firs Neue Trial Var Roman"),
+    url("../fonts/TT Firs Neue Trial Var Roman/TT_Firs_Neue_Trial_Regular.woff2") format("woff2"),
+    url("../fonts/TT Firs Neue Trial Var Roman/TT_Firs_Neue_Trial_Regular.woff") format("woff"),
+    url("../fonts/TT Firs Neue Trial Var Roman/TT_Firs_Neue_Trial_Regular.ttf") format("ttf"),
+    url("../fonts/TT Firs Neue Trial Var Roman/TT_Firs_Neue_Trial_Regular.svg#TTFirsNeueTrialVarRoman") format("svg");
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "TT Firs Neue Trial Var Roman";
+    src: local("TT Firs Neue Trial Var Roman"),
+    url("../fonts/TT Firs Neue Trial Var Roman/TT_Firs_Neue_Trial_Medium.woff2") format("woff2"),
+    url("../fonts/TT Firs Neue Trial Var Roman/TT_Firs_Neue_Trial_Medium.woff") format("woff"),
+    url("../fonts/TT Firs Neue Trial Var Roman/TT_Firs_Neue_Trial_Medium.ttf") format("ttf"),
+    url("../fonts/TT Firs Neue Trial Var Roman/TT_Firs_Neue_Trial_Medium.svg#TTFirsNeueTrialVarRoman") format("svg");
+    font-weight: 500;
+    font-style: normal;
+}
+
+
+@font-face {
+    font-family: "TT Firs Neue";
+    src: local("TT Firs Neue"),
+    url("../fonts/TT Firs Neue Trial Var Roman/TT_Firs_Neue_Trial_DemiBold.woff2") format("woff2"),
+    url("../fonts/TT Firs Neue Trial Var Roman/TT_Firs_Neue_Trial_DemiBold.woff") format("woff"),
+    url("../fonts/TT Firs Neue Trial Var Roman/TT_Firs_Neue_Trial_DemiBold.ttf") format("ttf"),
+    url("../fonts/TT Firs Neue Trial Var Roman/TT_Firs_Neue_Trial_DemiBold.svg#TTFirsNeueTrialVarRoman") format("svg");
+    font-weight: 600;
+    font-style: normal;
+}
+
+/*TT Firs Neue Trl*/

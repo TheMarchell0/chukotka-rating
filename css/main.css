@@ -1,0 +1,75 @@
+/*Common styles*/
+@import "fonts.css";
+@import "vendor/normalize.css";
+@import "components/header.css";
+@import "components/footer.css";
+
+/*UI styles*/
+@import "UI/button.css";
+@import "UI/input.css";
+
+/*Main page styles*/
+@import "pages/main/hero.css";
+@import "pages/main/rating.css";
+@import "pages/main/form.css";
+@import "pages/main/materials.css";
+
+
+* {
+    font-family: "TT Firs Neue Trial Var Roman", "Arial", sans-serif;
+}
+
+*, :after, :before {
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+main {
+    min-height: 100vh;
+}
+
+body {
+    background-color: #ebf1f8;
+}
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+a {
+    -webkit-transition: 0.2s linear;
+    -o-transition: 0.2s linear;
+    transition: 0.2s linear;
+}
+
+a:not(.button):hover {
+    opacity: 0.6;
+}
+
+img {
+    pointer-events: none;
+}
+
+.absolute-link {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 100;
+}
+
+.visually-hidden {
+    position: absolute !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    width: 1px !important;
+    height: 1px !important;
+    white-space: nowrap !important;
+    -webkit-clip-path: inset(100%) !important;
+    clip-path: inset(100%) !important;
+    clip: rect(0 0 0 0) !important;
+    overflow: hidden !important;
+}
