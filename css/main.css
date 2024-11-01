@@ -11,8 +11,13 @@
 /*Main page styles*/
 @import "pages/main/hero.css";
 @import "pages/main/rating.css";
-@import "pages/main/form.css";
+@import "pages/main/data.css";
 @import "pages/main/materials.css";
+
+:root {
+    --mainColor: #3A476E;
+    --buttonBackground: linear-gradient(183.18deg, #8AA0FC -16.12%, #4C6CEE 138.46%);
+}
 
 
 * {
@@ -32,6 +37,13 @@ body {
     background-color: #ebf1f8;
 }
 
+section {
+    position: relative;
+    max-width: 1920px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
 ul {
     list-style-type: none;
     margin: 0;
@@ -44,7 +56,7 @@ a {
     transition: 0.2s linear;
 }
 
-a:not(.button):hover {
+a:hover {
     opacity: 0.6;
 }
 
@@ -72,4 +84,48 @@ img {
     clip-path: inset(100%) !important;
     clip: rect(0 0 0 0) !important;
     overflow: hidden !important;
+}
+
+.container {
+    padding: 0 65px;
+}
+
+.content {
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%;
+}
+
+.world-map-bg::before {
+    content: '';
+    display: block;
+    position: absolute;
+    width: 1926px;
+    height: 914px;
+    background: url('/images/world-map-bg.png') no-repeat center;
+    z-index: -1;
+}
+
+.section-title {
+    font-family: 'HeliosExt';
+    font-size: 88px;
+    font-weight: 700;
+    line-height: 106px;
+    text-align: center;
+    color: var(--mainColor);
+    text-transform: uppercase;
+    margin: 0 auto;
+    max-width: 1558px;
+    width: 100%;
+}
+
+.section-title.white {
+    color: #FFFFFF;
+}
+
+@media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min-resolution: 192dpi) {
+    .world-map-bg::before {
+        background: url('/images/world-map-bg@2x.png') no-repeat center;
+        background-size: cover;
+    }
 }

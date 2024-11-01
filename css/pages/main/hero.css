@@ -2,6 +2,39 @@
     background: url('/images/hero-bg.png') no-repeat center;
 }
 
+.hero__content {
+    padding: 314px 0 265px;
+    max-width: 90%;
+}
+
+.hero__title,
+.hero__subtitle {
+    color: #FFFFFF;
+    font-family: 'HeliosExt';
+    text-align: center;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+.hero__title {
+    font-size: 100px;
+    line-height: 133px;
+}
+
+.hero__subtitle {
+    font-size: 64px;
+    line-height: 107px;
+    margin-bottom: 49px;
+}
+
+.hero__button {
+    font-size: 24px;
+    font-weight: 600;
+    line-height: 30.96px;
+    margin: 0 auto;
+    padding: 22px 52px 26px;
+}
+
 @media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min-resolution: 192dpi) {
     .hero {
         background: url('/images/hero-bg@2x.png') no-repeat center;

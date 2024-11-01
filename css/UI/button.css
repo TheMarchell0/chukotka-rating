@@ -1,0 +1,18 @@
+.button {
+    font-family: 'TT Firs Neue Trl';
+    background: var(--buttonBackground);
+    border-radius: 72px;
+    color: #FFFFFF;
+    width: fit-content;
+    -webkit-transition: 0.2s linear;
+    -o-transition: 0.2s linear;
+    transition: 0.2s linear;
+}
+
+a.button {
+    display: block;
+}
+
+.button:hover {
+    opacity: 0.6;
+}

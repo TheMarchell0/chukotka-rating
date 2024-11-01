@@ -1,0 +1,33 @@
+.header {
+    position: fixed;
+    backdrop-filter: blur(54px);
+    width: 100%;
+    border-radius: 0px 0px 48px 48px;
+    z-index: 100;
+}
+
+.header__content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 1920px;
+    padding: 31px 0 20px;
+
+}
+
+.header__nav-list {
+    display: flex;
+    align-items: center;
+}
+
+.header__nav-list-item {
+    font-family: TT Firs Neue Trl;
+    font-size: 32px;
+    font-weight: 400;
+    line-height: 21px;
+    color: #FFFFFF;
+}
+
+.header__nav-list-item:not(:last-child) {
+    margin-right: 234px;
+}

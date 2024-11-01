@@ -13,46 +13,146 @@
 </head>
 <body>
 <header class="header">
-    <div class="header__container">
-
+    <div class="header__container container">
+        <div class="header__content content">
+            <picture>
+                <source
+                        srcset="images/header-logo.png 1x, ../images/header-logo@2x.png 2x"
+                />
+                <img
+                        src="images/header-logo.png"
+                        alt="Логотип"
+                        width="235"
+                        class="header__logo-img"
+                />
+            </picture>
+            <nav class="header__nav">
+                <ul class="header__nav-list">
+                    <li class="header__nav-list-item">
+                        Главная
+                    </li>
+                    <li class="header__nav-list-item">
+                        Контакты
+                    </li>
+                </ul>
+            </nav>
+        </div>
     </div>
 </header>
 
 <main>
     <section class="hero">
         <div class="hero__container container">
-
+            <div class="hero__content content">
+                <h1 class="hero__title">Национальный рейтинг</h1>
+                <h2 class="hero__subtitle">Создаем Чукотку будущего</h2>
+                <a href="#form-anchor" class="hero__button button">Заполнить форму</a>
+            </div>
         </div>
     </section>
-    <section class="rating">
+    <section class="rating world-map-bg">
         <div class="rating__container container">
-            <picture>
-                <source
-                        srcset="images/rating-img.png 1x, ../images/rating-img@2x.png 2x"
-                />
-                <img
-                        src="images/rating-img.png"
-                        alt="Рейтинг  Чукотского АО. 2017 - 2024"
-                        width="1105"
-                        class="rating__img"
-                />
-            </picture>
+            <h2 class="rating__title section-title">Что такое национальный рейтинг?</h2>
+            <div class="rating__content content">
+                <picture>
+                    <source
+                            srcset="images/rating-img.png 1x, ../images/rating-img@2x.png 2x"
+                    />
+                    <img
+                            src="images/rating-img.png"
+                            alt="Рейтинг  Чукотского АО. 2017 - 2024"
+                            width="1105"
+                            class="rating__img"
+                    />
+                </picture>
+                <ul class="rating__content-list">
+                    <li class="rating__content-list-item">Это <span>инструмент для оценки</span> основных аспектов, влияющих на&nbsp;создание позитивной инвестиционной и деловой среды в регионах России</li>
+                    <li class="rating__content-list-item">Он также позволяет <span>оценить эффективность</span> работы местных властей в развитии инвестклимата региона</li>
+                </ul>
+            </div>
         </div>
     </section>
-    <section class="form">
-        <div class="form__container container">
-
+    <section class="data">
+        <div class="data__container container">
+            <div class="data__content content">
+                <h2 class="data__title section-title white">Форма сбора данных</h2>
+                <form class="data__form">
+                    <div class="data__form-column">
+                        <p class="data__form-column-title">Информация о респонденте</p>
+                        <div class="data__form-column-input-wrapper js-input-wrapper input-wrapper">
+                            <input class="data__form-column-input js-input input" id="info-locality" type="text" placeholder="">
+                            <label for="info-locality" class="data__form-column-label label">Населенный пункт</label>
+                        </div>
+                        <div class="data__form-column-input-wrapper js-input-wrapper input-wrapper">
+                            <input class="data__form-column-input js-input input" id="pokazatel" type="text" placeholder="">
+                            <label for="pokazatel" class="data__form-column-label label">Выбрать показатель</label>
+                        </div>
+                        <div class="data__form-column-input-wrapper js-input-wrapper input-wrapper">
+                            <input class="data__form-column-input js-input input" id="info-name" type="text" placeholder="">
+                            <label for="info-name" class="data__form-column-label label">ФИО</label>
+                        </div>
+                        <div class="data__form-column-input-wrapper js-input-wrapper input-wrapper">
+                            <input class="data__form-column-input js-input input" id="info-phone" type="text" placeholder="">
+                            <label for="info-phone" class="data__form-column-label label">Номер телефона</label>
+                        </div>
+                        <div class="data__form-column-input-wrapper js-input-wrapper input-wrapper">
+                            <input class="data__form-column-input js-input input" id="info-position" type="text" placeholder="">
+                            <label for="info-position" class="data__form-column-label label">Должность</label>
+                        </div>
+                        <div class="data__form-column-input-wrapper js-input-wrapper input-wrapper">
+                            <input class="data__form-column-input js-input input" id="info-email" type="text" placeholder="">
+                            <label for="info-email" class="data__form-column-label label">Электронная почта</label>
+                        </div>
+                        <div class="data__form-column-input-wrapper js-input-wrapper input-wrapper">
+                            <input class="data__form-column-input js-input input" id="info-organization-name" type="text" placeholder="">
+                            <label for="info-organization-name" class="data__form-column-label label">Наименование организации</label>
+                        </div>
+                    </div>
+                    <div class="data__form-column">
+                        <p class="data__form-column-title">Контакты отправителя</p>
+                        <div class="data__form-column-input-wrapper js-input-wrapper input-wrapper white">
+                            <input class="data__form-column-input js-input input" id="contacts-name" type="text" placeholder="">
+                            <label for="contacts-name" class="data__form-column-label label">ФИО</label>
+                        </div>
+                        <div class="data__form-column-input-wrapper js-input-wrapper input-wrapper white">
+                            <input class="data__form-column-input js-input input" id="contacts-phone" type="text" placeholder="">
+                            <label for="contacts-phone" class="data__form-column-label label">Номер телефона</label>
+                        </div>
+                        <button class="data__form-button button" type="submit">Отправить данные</button>
+                    </div>
+                </form>
+            </div>
         </div>
     </section>
-    <section class="materials">
+    <section class="materials world-map-bg">
         <div class="materials__container container">
-
+            <h2 class="materials__title section-title">Полезные материалы</h2>
+            <ul class="materials__list content">
+                <li class="materials__list-item">
+                    <a href="#" class="absolute-link"></a>
+                    <p class="materials__list-title">Распоряжения</p>
+                </li>
+                <li class="materials__list-item">
+                    <a href="#" class="absolute-link"></a>
+                    <p class="materials__list-title">Методология и параметризация</p>
+                </li>
+                <li class="materials__list-item">
+                    <a href="#" class="absolute-link"></a>
+                    <p class="materials__list-title">Таблица национального рейтинга</p>
+                </li>
+            </ul>
         </div>
     </section>
 </main>
 
 <footer class="footer">
+    <div class="footer__container container">
+        <div class="footer__content">
+            <p class="footer__title">Связаться с нами</p>
 
+        </div>
+        <p class="footer__copyright"><span class="js-current-year"></span> © — Департамент экономики и инвестиций Чукотского АО</p>
+    </div>
 </footer>
 
 <script type="module" src="js/main.js"></script>
