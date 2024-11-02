@@ -1,5 +1,6 @@
 .input-wrapper {
     position: relative;
+    height: fit-content;
 }
 
 .label {
@@ -25,7 +26,7 @@
     border-radius: 61px;
     background-color: #DCE8FF;
     color: #000000;
-    padding: 29px 10px 10px;
+    padding: 29px 33px 10px;
     width: 100%;
     font-size: 24px;
     font-weight: 500;

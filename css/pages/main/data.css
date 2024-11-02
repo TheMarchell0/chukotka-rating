@@ -5,15 +5,16 @@
 }
 
 .data__content {
-    backdrop-filter: blur(58px);
+    backdrop-filter: blur(14px);
     border-radius: 69px;
     box-shadow: 0px 4px 28.7px 0px rgba(0, 0, 0, 0.25);
-    margin: 62px 0 10px;
+    margin: 62px 0 61px;
     max-width: 1764px;
+    padding: 50px 0 109px;
 }
 
 .data__title {
-    padding: 50px 0 93px;
+    padding-bottom: 93px;
 }
 
 .data__form {
@@ -25,20 +26,36 @@
 .data__form-column {
     border-radius: 48px;
     background: #F1F9FF;
-    padding: 43px 62px 10px;
+    padding: 43px 62px;
     display: flex;
-    flex-wrap: wrap;
-    align-items: baseline;
+    box-shadow: 0px 4px 11px 0px #00000040;
+    min-height: 648px;
 }
 
 .data__form-column:nth-child(odd) {
     flex: 0 0 912px;
     margin-right: 40px;
+    padding: 43px 70px 111px 62px;
+    flex-wrap: wrap;
 }
 
 .data__form-column:nth-child(even) {
     background: linear-gradient(114.95deg, rgba(255, 255, 255, 0.93) -12.7%, #A7B8F3 105.52%);
     flex: auto;
+    flex-direction: column;
+}
+
+.data__form-column-input-wrapper {
+    margin-bottom: 31px;
+}
+
+.data__form-column:nth-child(odd) .data__form-column-input-wrapper {
+    flex: auto;
+}
+
+.data__form-column:nth-child(odd) .data__form-column-input-wrapper:nth-of-type(odd) {
+    margin-right: 45px;
+    flex: 0 1 382px;
 }
 
 .data__form-column-title {
@@ -47,11 +64,14 @@
     line-height: 49.02px;
     color: #7D7D7D;
     margin-bottom: 42px;
-    flex: 100%;
 }
 
 .data__form-button {
-    flex: 100%;
+    font-size: 32px;
+    font-weight: 500;
+    line-height: 41.28px;
+    margin: auto auto 0;
+    padding: 23px 44px;
 }
 
 @media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min-resolution: 192dpi) {
