@@ -56,8 +56,8 @@ a {
     transition: 0.2s linear;
 }
 
-a:hover {
-    opacity: 0.6;
+a:not(.button):hover {
+    filter: brightness(0.7);
 }
 
 img {
@@ -96,7 +96,8 @@ img {
     width: 100%;
 }
 
-.world-map-bg::before {
+.world-map-bg::before,
+.world-map-bg.double::after {
     content: '';
     display: block;
     position: absolute;

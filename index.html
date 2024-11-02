@@ -7,8 +7,12 @@
             content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"
     />
     <meta http-equiv="X-UA-Compatible" content="ie=edge"/>
-    <title>Заголовок</title>
+    <title>Национальный рейтинг Чукотского АО</title>
     <link rel="icon" type="image/png" href="images/favicon.ico">
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
     <link rel="stylesheet" href="css/main.css"/>
 </head>
 <body>
@@ -46,7 +50,7 @@
             <div class="hero__content content">
                 <h1 class="hero__title">Национальный рейтинг</h1>
                 <h2 class="hero__subtitle">Создаем Чукотку будущего</h2>
-                <a href="#form-anchor" class="hero__button button">Заполнить форму</a>
+                <a href="#form-anchor" class="hero__button button js-anchor">Заполнить форму</a>
             </div>
         </div>
     </section>
@@ -66,13 +70,17 @@
                     />
                 </picture>
                 <ul class="rating__content-list">
-                    <li class="rating__content-list-item">Это <span>инструмент для оценки</span> основных аспектов, влияющих на&nbsp;создание позитивной инвестиционной и деловой среды в регионах России</li>
-                    <li class="rating__content-list-item">Он также позволяет <span>оценить эффективность</span> работы местных властей в развитии инвестклимата региона</li>
+                    <li class="rating__content-list-item">Это <span>инструмент для оценки</span> основных аспектов,
+                        влияющих на&nbsp;создание позитивной инвестиционной и деловой среды в регионах России
+                    </li>
+                    <li class="rating__content-list-item">Он также позволяет <span>оценить эффективность</span> работы
+                        местных властей в развитии инвестклимата региона
+                    </li>
                 </ul>
             </div>
         </div>
     </section>
-    <section class="data">
+    <section class="data" id="form-anchor">
         <div class="data__container container">
             <div class="data__content content">
                 <h2 class="data__title section-title white">Форма сбора данных</h2>
@@ -80,42 +88,52 @@
                     <div class="data__form-column">
                         <p class="data__form-column-title">Информация о респонденте</p>
                         <div class="data__form-column-input-wrapper js-input-wrapper input-wrapper">
-                            <input class="data__form-column-input js-input input" id="info-locality" type="text" placeholder="">
+                            <input class="data__form-column-input js-input input" id="info-locality" type="text"
+                                   placeholder="">
                             <label for="info-locality" class="data__form-column-label label">Населенный пункт</label>
                         </div>
                         <div class="data__form-column-input-wrapper js-input-wrapper input-wrapper">
-                            <input class="data__form-column-input js-input input" id="pokazatel" type="text" placeholder="">
+                            <input class="data__form-column-input js-input input" id="pokazatel" type="text"
+                                   placeholder="">
                             <label for="pokazatel" class="data__form-column-label label">Выбрать показатель</label>
                         </div>
                         <div class="data__form-column-input-wrapper js-input-wrapper input-wrapper">
-                            <input class="data__form-column-input js-input input" id="info-name" type="text" placeholder="">
+                            <input class="data__form-column-input js-input input" id="info-name" type="text"
+                                   placeholder="">
                             <label for="info-name" class="data__form-column-label label">ФИО</label>
                         </div>
                         <div class="data__form-column-input-wrapper js-input-wrapper input-wrapper">
-                            <input class="data__form-column-input js-input input" id="info-phone" type="text" placeholder="">
+                            <input class="data__form-column-input js-input input" id="info-phone" type="text"
+                                   placeholder="">
                             <label for="info-phone" class="data__form-column-label label">Номер телефона</label>
                         </div>
                         <div class="data__form-column-input-wrapper js-input-wrapper input-wrapper">
-                            <input class="data__form-column-input js-input input" id="info-position" type="text" placeholder="">
+                            <input class="data__form-column-input js-input input" id="info-position" type="text"
+                                   placeholder="">
                             <label for="info-position" class="data__form-column-label label">Должность</label>
                         </div>
                         <div class="data__form-column-input-wrapper js-input-wrapper input-wrapper">
-                            <input class="data__form-column-input js-input input" id="info-email" type="text" placeholder="">
+                            <input class="data__form-column-input js-input input" id="info-email" type="text"
+                                   placeholder="">
                             <label for="info-email" class="data__form-column-label label">Электронная почта</label>
                         </div>
                         <div class="data__form-column-input-wrapper js-input-wrapper input-wrapper">
-                            <input class="data__form-column-input js-input input" id="info-organization-name" type="text" placeholder="">
-                            <label for="info-organization-name" class="data__form-column-label label">Наименование организации</label>
+                            <input class="data__form-column-input js-input input" id="info-organization-name"
+                                   type="text" placeholder="">
+                            <label for="info-organization-name" class="data__form-column-label label">Наименование
+                                организации</label>
                         </div>
                     </div>
                     <div class="data__form-column">
                         <p class="data__form-column-title">Контакты отправителя</p>
                         <div class="data__form-column-input-wrapper js-input-wrapper input-wrapper white">
-                            <input class="data__form-column-input js-input input" id="contacts-name" type="text" placeholder="">
+                            <input class="data__form-column-input js-input input" id="contacts-name" type="text"
+                                   placeholder="">
                             <label for="contacts-name" class="data__form-column-label label">ФИО</label>
                         </div>
                         <div class="data__form-column-input-wrapper js-input-wrapper input-wrapper white">
-                            <input class="data__form-column-input js-input input" id="contacts-phone" type="text" placeholder="">
+                            <input class="data__form-column-input js-input input" id="contacts-phone" type="text"
+                                   placeholder="">
                             <label for="contacts-phone" class="data__form-column-label label">Номер телефона</label>
                         </div>
                         <button class="data__form-button button" type="submit">Отправить данные</button>
@@ -124,7 +142,7 @@
             </div>
         </div>
     </section>
-    <section class="materials world-map-bg">
+    <section class="materials world-map-bg double">
         <div class="materials__container container">
             <h2 class="materials__title section-title">Полезные материалы</h2>
             <ul class="materials__list content">
@@ -134,7 +152,7 @@
                 </li>
                 <li class="materials__list-item">
                     <a href="#" class="absolute-link"></a>
-                    <p class="materials__list-title">Методология и параметризация</p>
+                    <p class="materials__list-title">Методология и&nbsp;параметризация</p>
                 </li>
                 <li class="materials__list-item">
                     <a href="#" class="absolute-link"></a>
@@ -147,11 +165,68 @@
 
 <footer class="footer">
     <div class="footer__container container">
-        <div class="footer__content">
-            <p class="footer__title">Связаться с нами</p>
-
+        <div class="footer__content content">
+            <div class="footer__column">
+                <p class="footer__title">Связаться с нами</p>
+            </div>
+            <div class="footer__column">
+                <p class="footer__subtitle">Мы в&nbsp;социальных сетях</p>
+                <ul class="footer__column-socials-list">
+                    <li class="footer__column-socials-list-item">
+                        <a class="absolute-link" href="#"></a>
+                        <img
+                                src="images/vk-icon.svg"
+                                alt="VK"
+                                width="40"
+                                class="footer__column-socials-list-img"
+                        />
+                    </li>
+                    <li class="footer__column-socials-list-item">
+                        <a class="absolute-link" href="#"></a>
+                        <img
+                                src="images/tg-icon.svg"
+                                alt="Telegram"
+                                width="40"
+                                class="footer__column-socials-list-img"
+                        />
+                    </li>
+                </ul>
+            </div>
+            <div class="footer__column">
+                <p class="footer__subtitle">Контакты</p>
+                <ul class="footer__column-contacts-list">
+                    <li class="footer__column-contacts-list-item">
+                        <img
+                                src="images/person-icon.svg"
+                                alt="Иконка"
+                                width="32"
+                                class="footer__column-contacts-list-img"
+                        />
+                        <p class="footer__column-contacts-list-text">Савельева Юлия Александровна</p>
+                    </li>
+                    <li class="footer__column-contacts-list-item">
+                        <img
+                                src="images/phone-icon.svg"
+                                alt="Иконка"
+                                width="32"
+                                class="footer__column-contacts-list-img"
+                        />
+                        <a href="tel:+79145378490" class="footer__column-contacts-list-text">+7 (914) 537-84-90</a>
+                    </li>
+                    <li class="footer__column-contacts-list-item">
+                        <img
+                                src="images/email-icon.svg"
+                                alt="Иконка"
+                                width="32"
+                                class="footer__column-contacts-list-img"
+                        />
+                        <a href="mailto:yu.saveleva@invest.chukotka-gov.ru" class="footer__column-contacts-list-text">yu.saveleva@invest.chukotka-gov.ru</a>
+                    </li>
+                </ul>
+            </div>
         </div>
-        <p class="footer__copyright"><span class="js-current-year"></span> © — Департамент экономики и инвестиций Чукотского АО</p>
+        <p class="footer__copyright"><span class="js-current-year"></span> © — Департамент экономики и инвестиций
+            Чукотского АО</p>
     </div>
 </footer>
 

@@ -13,11 +13,11 @@
 
 .rating__content {
     display: flex;
-    max-width: 95%;
+    max-width: 94%;
 }
 
 .rating__content-list {
-    flex: 0 1 509px;
+    flex: 0 0 509px;
     margin: 132px 0 0 99px;
 }
 
@@ -35,6 +35,7 @@
 
 .rating__content-list-item span {
     font-weight: 600;
+    letter-spacing: 0.8px;
 }
 
 .rating__content-list-item::before {

@@ -1,6 +1,26 @@
+.materials {
+    padding-bottom: 152px;
+    overflow: hidden;
+}
+
+.materials::before {
+    top: -322px;
+    left: -12px;
+}
+
+.materials::after {
+    bottom: -503px;
+    left: -38px;
+}
+
+.materials__title {
+    padding: 225px 0 118px;
+}
+
 .materials__list {
     display: flex;
     flex-wrap: wrap;
+    max-width: 1622px;
 }
 
 .materials__list-item {
