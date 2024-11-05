@@ -1,10 +1,14 @@
 export function fixedHeaderFunctional() {
-    const header = document.querySelector('.js-header');
+    const header = document.querySelector('.js-header'),
+        heroHeight = document.querySelector('.js-hero-section').offsetHeight,
+        triggerHeight = heroHeight - header.offsetHeight;
+
     checkScroll();
+
     document.addEventListener('scroll', checkScroll);
 
     function checkScroll() {
-        if (window.pageYOffset > 950) {
+        if (window.pageYOffset > triggerHeight) {
             if (!header.classList.contains('colored')) {
                 header.classList.add('colored');
             }

@@ -31,7 +31,6 @@
     font-size: 24px;
     font-weight: 500;
     line-height: 30.96px;
-
 }
 
 .input:focus {
@@ -46,4 +45,18 @@
 .input:not(:placeholder-shown):not(:focus) + .label {
     top: 14px;
     font-size: 14px;
+}
+
+@media (max-width: 1920px) {
+    .input {
+        border-radius: 49px;
+        padding: 23px 27px 8px;
+        font-size: 19px;
+        line-height: 25.96px;
+    }
+
+    .label {
+        font-size: 17px;
+        line-height: 23.96px;
+    }
 }

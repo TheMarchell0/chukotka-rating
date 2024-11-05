@@ -1,6 +1,7 @@
 /*Common styles*/
 @import "fonts.css";
 @import "vendor/normalize.css";
+@import "vendor/variables.css";
 @import "components/header.css";
 @import "components/footer.css";
 
@@ -13,11 +14,6 @@
 @import "pages/main/rating.css";
 @import "pages/main/data.css";
 @import "pages/main/materials.css";
-
-:root {
-    --mainColor: #3A476E;
-    --buttonBackground: linear-gradient(183.18deg, #8AA0FC -16.12%, #4C6CEE 138.46%);
-}
 
 
 * {
@@ -35,6 +31,8 @@ main {
 
 body {
     background-color: #ebf1f8;
+    overflow-x: hidden;
+    -webkit-overflow-scrolling: auto;
 }
 
 section {
@@ -128,5 +126,35 @@ img {
     .world-map-bg::before {
         background: url('/images/world-map-bg@2x.png') no-repeat center;
         background-size: cover;
+    }
+}
+
+@media (max-width: 1920px) {
+    .section-title {
+        font-size: 70px;
+        line-height: 88px;
+        max-width: 1260px;
+    }
+}
+
+@media (max-width: 1440px) {
+    .container {
+        padding: 0 40px;
+    }
+
+    .section-title {
+        font-size: 53px;
+        line-height: 71px;
+        max-width: 950px;
+    }
+}
+
+@media (max-width: 1024px) {
+    .container {
+        padding: 0 20px;
+    }
+    .section-title {
+        font-size: 41px;
+        line-height: 59px;
     }
 }

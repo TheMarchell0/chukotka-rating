@@ -80,3 +80,121 @@
         background-size: cover;
     }
 }
+
+@media (max-width: 1920px) {
+    .data {
+        border-radius: 88px;
+    }
+
+    .data__content {
+        margin: 49px 0 48px;
+        padding: 40px 0 87px;
+        border-radius: 55px;
+    }
+
+    .data__title {
+        padding-bottom: 74px;
+    }
+
+    .data__form {
+        max-width: 84.2971%;
+    }
+
+    .data__form-column {
+        min-height: 518px;
+        border-radius: 39px;
+    }
+
+    .data__form-column,
+    .data__form-column:nth-child(odd) {
+        padding: 34px 30px;
+    }
+
+    .data__form-column:nth-child(odd) {
+        flex: 0 0 61.332%;
+        margin-right: 32px;
+    }
+
+    .data__form-column-input-wrapper {
+        margin-bottom: 25px;
+    }
+
+    .data__form-column:nth-child(odd) .data__form-column-input-wrapper:nth-of-type(odd) {
+        margin-right: 36px;
+        flex: 0 1 48%;
+    }
+
+    .data__form-column-title {
+        font-size: 30px;
+        line-height: 41.02px;
+        margin-bottom: 34px;
+    }
+
+    .data__form-button {
+        font-size: 26px;
+        line-height: 35.28px;
+        padding: 18px 35px;
+    }
+}
+
+@media (max-width: 1440px) {
+    .data {
+        border-radius: 70px;
+    }
+
+    .data__content {
+        margin: 39px 0 38px;
+        padding: 32px 0 70px;
+        border-radius: 44px;
+    }
+
+    .data__title.section-title.white {
+        color: var(--mainColor);
+        padding-bottom: 59px;
+    }
+
+    .data__form {
+        max-width: 90%;
+    }
+
+    .data__form-column {
+        min-height: initial;
+        border-radius: 31px;
+    }
+
+    .data__form-column,
+    .data__form-column:nth-child(odd) {
+        padding: 27px 24px;
+    }
+
+    .data__form-column:nth-child(odd) {
+        flex: 0 0 50%;
+        margin-right: 26px;
+    }
+
+    .data__form-column-input-wrapper {
+        margin-bottom: 20px;
+    }
+
+    .data__form-column:nth-child(odd) .data__form-column-input-wrapper:nth-of-type(odd) {
+        margin-right: initial;
+        flex: 0 1 100%;
+    }
+
+    .data__form-column-title {
+        font-size: 24px;
+        line-height: 35.02px;
+        margin-bottom: 27px;
+    }
+
+    .data__form-button {
+        font-size: 21px;
+        line-height: 30.28px;
+    }
+}
+
+@media (max-width: 1024px) {
+    .data__form {
+        flex-direction: column;
+    }
+}

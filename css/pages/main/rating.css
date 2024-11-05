@@ -48,11 +48,112 @@
     width: 25px;
     height: 25px;
     background-color: #FFFFFF;
-    box-shadow:
-            0px 0px 2.25px 0px #CFD5F7,
-            0px 0px 4.5px 0px #CFD5F7,
-            0px 0px 15.75px 0px #CFD5F7,
-            0px 0px 31.5px 0px #CFD5F7,
-            0px 0px 54px 0px #CFD5F7,
-            0px 0px 94.5px 0px #CFD5F7;
+    box-shadow: 0px 0px 2.25px 0px #CFD5F7,
+    0px 0px 4.5px 0px #CFD5F7,
+    0px 0px 15.75px 0px #CFD5F7,
+    0px 0px 31.5px 0px #CFD5F7,
+    0px 0px 54px 0px #CFD5F7,
+    0px 0px 94.5px 0px #CFD5F7;
+}
+
+@media (max-width: 1920px) {
+    .rating {
+        margin-bottom: 153px;
+    }
+
+    .rating__title {
+        padding: 90px 0 96px;
+    }
+
+    .rating__content {
+        align-items: center;
+    }
+
+    .rating__img {
+        width: 47vw;
+    }
+
+    .rating__content-list {
+        margin: 0 0 0 99px;
+    }
+
+    .rating__content-list-item {
+        font-size: 24px;
+        line-height: 33px;
+    }
+
+    .rating__content-list-item:not(:last-child) {
+        margin-bottom: 93px;
+    }
+
+    .rating__content-list-item::before {
+        top: -40px;
+        width: 20px;
+        height: 20px;
+    }
+}
+
+@media (max-width: 1440px) {
+    .rating {
+        margin-bottom: 122px;
+    }
+
+    .rating__title {
+        padding: 72px 0 77px;
+    }
+
+    .rating__content {
+        max-width: initial;
+    }
+
+    .rating__img {
+        width: 50vw;
+    }
+
+    .rating__content-list {
+        margin: 0 0 0 50px;
+        flex: 0 0 39vw;
+    }
+
+    .rating__content-list-item {
+        font-size: 19px;
+        line-height: 28px;
+    }
+
+    .rating__content-list-item:not(:last-child) {
+        margin-bottom: 74px;
+    }
+
+    .rating__content-list-item::before {
+        top: -32px;
+        width: 16px;
+        height: 16px;
+    }
+}
+
+@media (max-width: 1024px) {
+    .rating {
+        margin-bottom: 98px;
+    }
+
+    .rating__title {
+        padding: 58px 0 62px;
+    }
+
+    .rating__content {
+        flex-direction: column;
+        align-items: initial;
+    }
+
+    .rating__img {
+        width: 100%;
+        max-width: 550px;
+        display: block;
+        margin: 0 auto;
+    }
+
+    .rating__content-list {
+        margin: 50px 0 0 0;
+        flex: initial;
+    }
 }

@@ -1,5 +1,6 @@
-function createAnchorsFunctional() {
+export function createAnchorsFunctional() {
     const anchorLinks = document.querySelectorAll('a[href^="#"]');
+    const headerHeight = document.querySelector('.js-header').offsetHeight;
 
     anchorLinks.forEach((link) => {
         link.addEventListener('click', (event) => {
@@ -9,13 +10,10 @@ function createAnchorsFunctional() {
             if (targetElement) {
                 const topOffset = targetElement.offsetTop;
                 window.scrollTo({
-                    top: topOffset,
+                    top: topOffset-headerHeight-20,
                     behavior: 'smooth'
                 });
             }
         });
     });
-
 }
-
-export default createAnchorsFunctional;
