@@ -118,7 +118,7 @@ img {
     color: #FFFFFF;
 }
 
-@media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min-resolution: 192dpi) {
+@media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (-o-min-device-pixel-ratio: 2/1), only screen and (min-resolution: 192dpi) {
     .world-map-bg::before,
     .world-map-bg.double::after {
         background: url('/images/world-map-bg@2x.png') no-repeat center;
@@ -159,6 +159,7 @@ img {
 
 @media (min-width: 1024px) {
     a:not(.button):hover {
+        -webkit-filter: brightness(0.7);
         filter: brightness(0.7);
     }
 }

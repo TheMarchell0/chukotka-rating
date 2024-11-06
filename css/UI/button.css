@@ -3,6 +3,8 @@
     background: var(--buttonBackground);
     border-radius: 72px;
     color: #FFFFFF;
+    width: -webkit-fit-content;
+    width: -moz-fit-content;
     width: fit-content;
     -webkit-transition: 0.2s linear;
     -o-transition: 0.2s linear;
@@ -27,6 +29,7 @@ a.button {
 
 @media (min-width: 1024px) {
     .button:hover {
+        -webkit-filter: brightness(0.7);
         filter: brightness(0.7);
     }
 }

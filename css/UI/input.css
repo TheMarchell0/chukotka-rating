@@ -1,5 +1,7 @@
 .input-wrapper {
     position: relative;
+    height: -webkit-fit-content;
+    height: -moz-fit-content;
     height: fit-content;
 }
 
@@ -12,7 +14,11 @@
     position: absolute;
     top: 54%;
     left: 33px;
+    -webkit-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
     transform: translateY(-50%);
+    -webkit-transition: top 0.3s, font-size 0.3s;
+    -o-transition: top 0.3s, font-size 0.3s;
     transition: top 0.3s, font-size 0.3s;
     z-index: 100;
     pointer-events: none;
@@ -39,6 +45,16 @@
 
 .input-wrapper.white .input {
     background-color: #FFFFFF;
+}
+
+.input:not(:-moz-placeholder-shown):not(:focus) + .label {
+    top: 14px;
+    font-size: 14px;
+}
+
+.input:not(:-ms-input-placeholder):not(:focus) + .label {
+    top: 14px;
+    font-size: 14px;
 }
 
 .input:focus + .label,
@@ -74,6 +90,16 @@
         font-size: 14px;
         line-height: 20.96px;
         left: 22px;
+    }
+
+    .input:not(:-moz-placeholder-shown):not(:focus) + .label {
+        top: 10px;
+        font-size: 10px;
+    }
+
+    .input:not(:-ms-input-placeholder):not(:focus) + .label {
+        top: 10px;
+        font-size: 10px;
     }
 
     .input:focus + .label, .input:not(:placeholder-shown):not(:focus) + .label {

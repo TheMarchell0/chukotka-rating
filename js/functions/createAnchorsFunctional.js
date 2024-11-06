@@ -1,5 +1,5 @@
 export function createAnchorsFunctional() {
-    const anchorLinks = document.querySelectorAll('a[href^="#"]');
+    const anchorLinks = document.querySelectorAll('.js-anchor');
     const headerHeight = document.querySelector('.js-header').offsetHeight;
 
     anchorLinks.forEach((link) => {
