@@ -14,6 +14,7 @@
     <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
     <link rel="manifest" href="/site.webmanifest">
     <link rel="stylesheet" href="css/main.css"/>
+    <link href="https://cdn.jsdelivr.net/npm/inputmask@5.0.9/dist/colormask.min.css" rel="stylesheet">
 </head>
 <body>
 <header class="header js-header">
@@ -87,7 +88,7 @@
         <div class="data__container container">
             <div class="data__content content">
                 <h2 class="data__title section-title white">Форма сбора данных</h2>
-                <form class="data__form">
+                <form class="data__form js-form">
                     <div class="data__form-column">
                         <p class="data__form-column-title">Информация о&nbsp;респонденте</p>
                         <div class="data__form-column-input-wrapper js-input-wrapper input-wrapper">
@@ -105,9 +106,9 @@
                                    placeholder="">
                             <label for="info-name" class="data__form-column-label label">ФИО</label>
                         </div>
-                        <div class="data__form-column-input-wrapper js-input-wrapper input-wrapper">
-                            <input class="data__form-column-input js-input input" id="info-phone" type="text"
-                                   placeholder="">
+                        <div class="data__form-column-input-wrapper js-input-wrapper input-wrapper js-phone-input">
+                            <input class="data__form-column-input js-input input js-phone-mask" id="info-phone" type="text"
+                                   placeholder="" inputmode="numeric">
                             <label for="info-phone" class="data__form-column-label label">Номер телефона</label>
                         </div>
                         <div class="data__form-column-input-wrapper js-input-wrapper input-wrapper">
@@ -115,7 +116,7 @@
                                    placeholder="">
                             <label for="info-position" class="data__form-column-label label">Должность</label>
                         </div>
-                        <div class="data__form-column-input-wrapper js-input-wrapper input-wrapper">
+                        <div class="data__form-column-input-wrapper js-input-wrapper js-email-input input-wrapper">
                             <input class="data__form-column-input js-input input" id="info-email" type="text"
                                    placeholder="">
                             <label for="info-email" class="data__form-column-label label">Электронная почта</label>
@@ -134,12 +135,12 @@
                                    placeholder="">
                             <label for="contacts-name" class="data__form-column-label label">ФИО</label>
                         </div>
-                        <div class="data__form-column-input-wrapper js-input-wrapper input-wrapper white">
-                            <input class="data__form-column-input js-input input" id="contacts-phone" type="text"
-                                   placeholder="">
+                        <div class="data__form-column-input-wrapper js-input-wrapper js-phone-input input-wrapper white">
+                            <input class="data__form-column-input js-input input js-phone-mask" id="contacts-phone" type="text"
+                                   placeholder="" inputmode="numeric">
                             <label for="contacts-phone" class="data__form-column-label label">Номер телефона</label>
                         </div>
-                        <button class="data__form-button button" type="submit">Отправить данные</button>
+                        <button class="data__form-button button js-submit-button" type="submit">Отправить данные</button>
                     </div>
                 </form>
             </div>
@@ -234,5 +235,6 @@
 </footer>
 
 <script type="module" src="js/main.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/inputmask@5.0.9/dist/inputmask.min.js"></script>
 </body>
 </html>

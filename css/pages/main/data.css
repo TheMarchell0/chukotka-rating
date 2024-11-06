@@ -137,10 +137,6 @@
         margin-right: 32px;
     }
 
-    .data__form-column-input-wrapper {
-        margin-bottom: 25px;
-    }
-
     .data__form-column:nth-child(odd) .data__form-column-input-wrapper:nth-of-type(odd) {
         margin-right: 36px;
         -webkit-box-flex: 0;
@@ -196,10 +192,6 @@
         -ms-flex: 0 0 50%;
         flex: 0 0 50%;
         margin-right: 26px;
-    }
-
-    .data__form-column-input-wrapper {
-        margin-bottom: 20px;
     }
 
     .data__form-column:nth-child(odd) .data__form-column-input-wrapper:nth-of-type(odd) {
@@ -283,10 +275,6 @@
         font-size: 19px;
         line-height: 30.02px;
         margin-bottom: 22px;
-    }
-
-    .data__form-column-input-wrapper {
-        margin-bottom: 16px;
     }
 
     .data__form-button {
