@@ -4,6 +4,9 @@
     border-radius: 0px 0px 48px 48px;
     z-index: 100;
     overflow: hidden;
+    max-width: 1920px;
+    left: 50%;
+    transform: translateX(-50%);
 }
 
 .header::before,
