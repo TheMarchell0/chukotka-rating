@@ -54,10 +54,6 @@ a {
     transition: 0.2s linear;
 }
 
-a:not(.button):hover {
-    filter: brightness(0.7);
-}
-
 img {
     pointer-events: none;
 }
@@ -123,7 +119,8 @@ img {
 }
 
 @media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min-resolution: 192dpi) {
-    .world-map-bg::before {
+    .world-map-bg::before,
+    .world-map-bg.double::after {
         background: url('/images/world-map-bg@2x.png') no-repeat center;
         background-size: cover;
     }
@@ -134,6 +131,12 @@ img {
         font-size: 70px;
         line-height: 88px;
         max-width: 1260px;
+    }
+    .world-map-bg::before,
+    .world-map-bg.double::after {
+        width: 100%;
+        background-size: cover;
+        height: 731px;
     }
 }
 
@@ -147,6 +150,17 @@ img {
         line-height: 71px;
         max-width: 950px;
     }
+
+    .world-map-bg::before,
+    .world-map-bg.double::after {
+        height: 584px;
+    }
+}
+
+@media (min-width: 1024px) {
+    a:not(.button):hover {
+        filter: brightness(0.7);
+    }
 }
 
 @media (max-width: 1024px) {
@@ -156,5 +170,31 @@ img {
     .section-title {
         font-size: 41px;
         line-height: 59px;
+        max-width: 729px;
+    }
+
+    .world-map-bg::before,
+    .world-map-bg.double::after {
+        height: 467px;
+    }
+}
+
+@media (max-width: 767px) {
+    .section-title {
+        font-size: 19px;
+        line-height: 37px;
+        max-width: 340px;
+    }
+
+    .world-map-bg::before,
+    .world-map-bg.double::after {
+        height: 373px;
+    }
+}
+
+@media (max-width: 767px) {
+    .section-title {
+        font-size: 15px;
+        line-height: 33px;
     }
 }

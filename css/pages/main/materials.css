@@ -48,10 +48,6 @@
     transition: 0.2s linear;
 }
 
-.materials__list-item:hover::before {
-    transform: scale(1.2);
-}
-
 .materials__list-item:not(:nth-child(3n)) {
     margin-right: 31px;
 }
@@ -106,6 +102,14 @@
         padding-bottom: 122px;
     }
 
+    .materials::before {
+        top: -229px;
+    }
+
+    .materials::after {
+        bottom: -411px;
+    }
+
     .materials__title {
         padding: 180px 0 94px;
     }
@@ -135,6 +139,14 @@
         padding-bottom: 97px;
     }
 
+    .materials::before {
+        top: -188px;
+    }
+
+    .materials::after {
+        bottom: -327px;
+    }
+
     .materials__title {
         padding: 144px 0 75px;
     }
@@ -159,8 +171,83 @@
     }
 }
 
+@media (min-width: 1024px) {
+    .materials__list-item:hover::before {
+        transform: scale(1.2);
+    }
+}
+
 @media (max-width: 1024px) {
+    .materials {
+        padding-bottom: 77px;
+    }
+
+    .materials::before {
+        top: -159px;
+    }
+
+    .materials::after {
+        bottom: -258px;
+    }
+
     .materials__list {
         flex-direction: column;
+    }
+
+    .materials__title {
+        padding: 115px 0 60px;
+    }
+
+    .materials__list-item {
+        flex: 0 0 100%;
+        min-height: 320px;
+        border-radius: 55px;
+    }
+
+    .materials__list-item:not(:nth-child(3n)) {
+        margin-right: initial;
+    }
+
+    .materials__list-title {
+        min-height: 120px;
+        padding: 28px 10px 10px;
+        border-radius: 53px;
+    }
+}
+
+@media (max-width: 767px) {
+    .materials {
+        padding-bottom: 62px;
+    }
+
+    .materials::before {
+        top: -128px;
+    }
+
+    .materials::after {
+        bottom: -202px;
+    }
+
+    .materials__title {
+        padding: 92px 0 48px;
+    }
+
+    .materials__list-item {
+        min-height: 320px;
+        border-radius: 44px;
+    }
+
+    .materials__list-title {
+        min-height: 96px;
+        padding: 22px 10px 10px;
+        border-radius: 42px;
+        font-size: 14px;
+        line-height: 28px;
+    }
+}
+
+@media (max-width: 350px) {
+    .materials__title {
+        padding: 54px 0;
     }
 }

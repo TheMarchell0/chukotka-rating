@@ -61,6 +61,10 @@
         margin-bottom: 153px;
     }
 
+    .rating::before {
+        top: -153px;
+    }
+
     .rating__title {
         padding: 90px 0 96px;
     }
@@ -96,6 +100,10 @@
 @media (max-width: 1440px) {
     .rating {
         margin-bottom: 122px;
+    }
+
+    .rating::before {
+        top: -129px;
     }
 
     .rating__title {
@@ -155,5 +163,34 @@
     .rating__content-list {
         margin: 50px 0 0 0;
         flex: initial;
+    }
+}
+
+@media (max-width: 767px) {
+    .rating {
+        margin-bottom: 78px;
+    }
+
+    .rating::before {
+        top: -105px;
+    }
+
+    .rating__title {
+        padding: 47px 0 50px;
+    }
+
+    .rating__content-list-item::before {
+        top: -26px;
+        width: 13px;
+        height: 13px;
+    }
+
+    .rating__content-list-item {
+        font-size: 15px;
+        line-height: 24px;
+    }
+
+    .rating__content-list-item:not(:last-child) {
+        margin-bottom: 60px;
     }
 }

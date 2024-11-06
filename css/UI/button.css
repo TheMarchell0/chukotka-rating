@@ -13,12 +13,26 @@ a.button {
     display: block;
 }
 
-.button:hover {
-    filter: brightness(0.7);
-}
-
 @media (max-width: 1920px) {
     .button {
         border-radius: 58px;
+    }
+}
+
+@media (max-width: 1440px) {
+    .button {
+        border-radius: 46px;
+    }
+}
+
+@media (min-width: 1024px) {
+    .button:hover {
+        filter: brightness(0.7);
+    }
+}
+
+@media (max-width: 1024px) {
+    .button {
+        border-radius: 37px;
     }
 }
