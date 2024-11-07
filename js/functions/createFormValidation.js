@@ -1,3 +1,5 @@
+import {clearMarkRadio} from "./markRadio.js";
+
 export function createFormValidation() {
     const forms = document.querySelectorAll('.js-form');
 
@@ -81,6 +83,7 @@ export function createFormValidation() {
                 field.value = '';
                 field.classList.remove('touched');
             });
+            clearMarkRadio();
         }
     }
 }

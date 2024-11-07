@@ -5,7 +5,7 @@ import {createFormValidation} from "./functions/createFormValidation.js";
 import {getCurrentYear} from "./functions/getCurrentYear.js";
 import {phoneMaskInitialization} from "./functions/phoneMaskInitialization.js";
 import {modalFunctional} from "./functions/modalFunctional.js";
-import {chooseMarkRadio} from "./functions/chooseMarkRadio.js";
+import {chooseMarkRadio} from "./functions/markRadio.js";
 
 document.addEventListener("DOMContentLoaded", function () {
     fixedHeaderFunctional();

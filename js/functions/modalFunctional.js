@@ -1,3 +1,5 @@
+import {insertMarkRadio} from "./markRadio.js";
+
 const body = document.body;
 
 export function modalFunctional() {
@@ -16,17 +18,22 @@ export function modalFunctional() {
         const closeButtons = modal.querySelectorAll('.js-close-modal');
 
         closeButtons.forEach(closeButton => {
-            closeButton.addEventListener('click', () => closeModal(modal));
+            closeButton.addEventListener('click', () => {
+                insertMarkRadio();
+                closeModal(modal)
+            });
         });
 
         modal.addEventListener('click', (event) => {
             if (event.target === modal) {
+                insertMarkRadio();
                 closeModal(modal);
             }
         });
 
         window.addEventListener('keydown', (event) => {
             if (event.key === 'Escape' && modal.classList.contains('active')) {
+                insertMarkRadio();
                 closeModal(modal);
             }
         });
