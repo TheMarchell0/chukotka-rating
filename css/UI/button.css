@@ -15,6 +15,12 @@ a.button {
     display: block;
 }
 
+.button[disabled] {
+    opacity: 0.3;
+    pointer-events: none;
+    filter: grayscale(1);
+}
+
 @media (max-width: 1920px) {
     .button {
         border-radius: 58px;

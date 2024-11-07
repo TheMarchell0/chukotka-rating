@@ -96,10 +96,11 @@
                                    placeholder="">
                             <label for="info-locality" class="data__form-column-label label">Населенный пункт</label>
                         </div>
-                        <div class="data__form-column-input-wrapper js-input-wrapper input-wrapper">
-                            <input class="data__form-column-input js-input input" id="pokazatel" type="text"
+                        <div class="data__form-column-input-wrapper js-input-wrapper input-wrapper js-mark-input-wrapper js-modal-trigger input-modal"
+                             data-open-modal="mark-modal">
+                            <input class="data__form-column-input js-input input" id="mark" type="text"
                                    placeholder="">
-                            <label for="pokazatel" class="data__form-column-label label">Выбрать показатель</label>
+                            <label for="mark" class="data__form-column-label label">Выбрать показатель</label>
                         </div>
                         <div class="data__form-column-input-wrapper js-input-wrapper input-wrapper">
                             <input class="data__form-column-input js-input input" id="info-name" type="text"
@@ -107,7 +108,8 @@
                             <label for="info-name" class="data__form-column-label label">ФИО</label>
                         </div>
                         <div class="data__form-column-input-wrapper js-input-wrapper input-wrapper js-phone-input">
-                            <input class="data__form-column-input js-input input js-phone-mask" id="info-phone" type="text"
+                            <input class="data__form-column-input js-input input js-phone-mask" id="info-phone"
+                                   type="text"
                                    placeholder="" inputmode="numeric">
                             <label for="info-phone" class="data__form-column-label label">Номер телефона</label>
                         </div>
@@ -136,11 +138,13 @@
                             <label for="contacts-name" class="data__form-column-label label">ФИО</label>
                         </div>
                         <div class="data__form-column-input-wrapper js-input-wrapper js-phone-input input-wrapper white">
-                            <input class="data__form-column-input js-input input js-phone-mask" id="contacts-phone" type="text"
+                            <input class="data__form-column-input js-input input js-phone-mask" id="contacts-phone"
+                                   type="text"
                                    placeholder="" inputmode="numeric">
                             <label for="contacts-phone" class="data__form-column-label label">Номер телефона</label>
                         </div>
-                        <button class="data__form-button button js-submit-button" type="submit">Отправить данные</button>
+                        <button class="data__form-button button js-submit-button" type="submit">Отправить данные
+                        </button>
                     </div>
                 </form>
             </div>
@@ -233,7 +237,86 @@
             Чукотского АО</p>
     </div>
 </footer>
-
+<div class="modal mark-modal js-modal" id="mark-modal">
+    <div class="mark-modal__wrapper modal__wrapper">
+        <span class="modal__close js-close-modal">X</span>
+        <ul class="mark-modal__list">
+            <li class="mark-modal__list-item">
+                <input class="mark-modal__list-radio radio js-mark-radio visually-hidden" type="radio" name="mark-type-radio" id="mark-a2" value="А2 - Эффективность процедур по выдаче разрешений на строительство">
+                <label for="mark-a2" class="mark-modal__list-radio-label radio-label">А2 - Эффективность процедур по выдаче разрешений на строительство</label>
+            </li>
+            <li class="mark-modal__list-item">
+                <input class="mark-modal__list-radio radio js-mark-radio visually-hidden" type="radio" name="mark-type-radio" id="mark-a3" value="А3 - Эффективность процедур по регистрации прав собственности ">
+                <label for="mark-a3" class="mark-modal__list-radio-label radio-label">А3 - Эффективность процедур по регистрации прав собственности</label>
+            </li>
+            <li class="mark-modal__list-item">
+                <input class="mark-modal__list-radio radio js-mark-radio visually-hidden" type="radio" name="mark-type-radio" id="mark-a5" value="А5 - Эффективность процедур по подключению электроэнергии">
+                <label for="mark-a5" class="mark-modal__list-radio-label radio-label">А5 - Эффективность процедур по подключению электроэнергии</label>
+            </li>
+            <li class="mark-modal__list-item">
+                <input class="mark-modal__list-radio radio js-mark-radio visually-hidden" type="radio" name="mark-type-radio" id="mark-a6" value="А6 - Эффективность процедур по подключению к газопроводу">
+                <label for="mark-a6" class="mark-modal__list-radio-label radio-label">А6 - Эффективность процедур по подключению к газопроводу</label>
+            </li>
+            <li class="mark-modal__list-item">
+                <input class="mark-modal__list-radio radio js-mark-radio visually-hidden" type="radio" name="mark-type-radio" id="mark-a7.1" value="А7.1 - Эффективность процедур по подключению к сетям водоснабжения">
+                <label for="mark-a7.1" class="mark-modal__list-radio-label radio-label">А7.1 - Эффективность процедур по подключению к сетям водоснабжения</label>
+            </li>
+            <li class="mark-modal__list-item">
+                <input class="mark-modal__list-radio radio js-mark-radio visually-hidden" type="radio" name="mark-type-radio" id="mark-a7.2" value="А7.2 - Эффективность процедур по подключению к сетям водоотведения">
+                <label for="mark-a7.2" class="mark-modal__list-radio-label radio-label">А7.2 - Эффективность процедур по подключению к сетям водоотведения</label>
+            </li>
+            <li class="mark-modal__list-item">
+                <input class="mark-modal__list-radio radio js-mark-radio visually-hidden" type="radio" name="mark-type-radio" id="mark-a8" value="А8 - Эффективность процедур по подключению к сетям теплоснабжения">
+                <label for="mark-a8" class="mark-modal__list-radio-label radio-label">А8 - Эффективность процедур по подключению к сетям теплоснабжения</label>
+            </li>
+            <li class="mark-modal__list-item">
+                <input class="mark-modal__list-radio radio js-mark-radio visually-hidden" type="radio" name="mark-type-radio" id="mark-a9" value="А9 - Эффективность процедур по вводу объекта в эксплуатацию">
+                <label for="mark-a9" class="mark-modal__list-radio-label radio-label">А9 - Эффективность процедур по вводу объекта в эксплуатацию</label>
+            </li>
+            <li class="mark-modal__list-item">
+                <input class="mark-modal__list-radio radio js-mark-radio visually-hidden" type="radio" name="mark-type-radio" id="mark-a10.1" value="А10.1 - Эффективность процедур по получению в аренду земельных участков (с торгами)">
+                <label for="mark-a10.1" class="mark-modal__list-radio-label radio-label">А10.1 - Эффективность процедур по получению в аренду земельных участков (с торгами)</label>
+            </li>
+            <li class="mark-modal__list-item">
+                <input class="mark-modal__list-radio radio js-mark-radio visually-hidden" type="radio" name="mark-type-radio" id="mark-a10.2" value="А10.2 - Эффективность процедур по получению в аренду земельных участков (без торгов)">
+                <label for="mark-a10.2" class="mark-modal__list-radio-label radio-label">А10.2 - Эффективность процедур по получению в аренду земельных участков (без торгов)</label>
+            </li>
+            <li class="mark-modal__list-item">
+                <input class="mark-modal__list-radio radio js-mark-radio visually-hidden" type="radio" name="mark-type-radio" id="mark-b3.1" value="Б3.1 - Эффективность работы Совета по улучшению инвестиционного климата">
+                <label for="mark-b3.1" class="mark-modal__list-radio-label radio-label">Б3.1 - Эффективность работы Совета по улучшению инвестиционного климата</label>
+            </li>
+            <li class="mark-modal__list-item">
+                <input class="mark-modal__list-radio radio js-mark-radio visually-hidden" type="radio" name="mark-type-radio" id="mark-b3.3" value="Б3.3 - Эффективность работы специализированной организации по привлечению инвестиций и работе с инвесторами">
+                <label for="mark-b3.3" class="mark-modal__list-radio-label radio-label">Б3.3 - Эффективность работы специализированной организации по привлечению инвестиций и работе с инвесторами</label>
+            </li>
+            <li class="mark-modal__list-item">
+                <input class="mark-modal__list-radio radio js-mark-radio visually-hidden" type="radio" name="mark-type-radio" id="mark-b5" value="Б5 - Эффективность институтов поддержки экспортной деятельности">
+                <label for="mark-b5" class="mark-modal__list-radio-label radio-label">Б5 - Эффективность институтов поддержки экспортной деятельности</label>
+            </li>
+            <li class="mark-modal__list-item">
+                <input class="mark-modal__list-radio radio js-mark-radio visually-hidden" type="radio" name="mark-type-radio" id="mark-b6.1" value="Б6.1 - Соблюдение положений региональной Инвестиционной декларации">
+                <label for="mark-b6.1" class="mark-modal__list-radio-label radio-label">Б6.1 - Соблюдение положений региональной Инвестиционной декларации</label>
+            </li>
+            <li class="mark-modal__list-item">
+                <input class="mark-modal__list-radio radio js-mark-radio visually-hidden" type="radio" name="mark-type-radio" id="mark-b6.2" value="Б6.2 - Качество реализации Инвестиционной карты">
+                <label for="mark-b6.2" class="mark-modal__list-radio-label radio-label">Б6.2 - Качество реализации Инвестиционной карты</label>
+            </li>
+            <li class="mark-modal__list-item">
+                <input class="mark-modal__list-radio radio js-mark-radio visually-hidden" type="radio" name="mark-type-radio" id="mark-b6.3" value="Б6.3 - Эффективность работы Инвестиционного комитета">
+                <label for="mark-b6.3" class="mark-modal__list-radio-label radio-label">Б6.3 - Эффективность работы Инвестиционного комитета</label>
+            </li>
+            <li class="mark-modal__list-item">
+                <input class="mark-modal__list-radio radio js-mark-radio visually-hidden" type="radio" name="mark-type-radio" id="mark-b1.4" value="В1.4 - Удовлетворенность предпринимателей объектами инвестиционной инфраструктуры (ТОСЭР, промышленный парк)">
+                <label for="mark-b1.4" class="mark-modal__list-radio-label radio-label">В1.4 - Удовлетворенность предпринимателей объектами инвестиционной инфраструктуры (ТОСЭР, промышленный парк)</label>
+            </li>
+            <li class="mark-modal__list-item">
+                <input class="mark-modal__list-radio radio js-mark-radio visually-hidden" type="radio" name="mark-type-radio" id="mark-b2" value="В2 - Эффективность процедур постановки земельного участка на кадастровый учет и качество территориального планирования">
+                <label for="mark-b2" class="mark-modal__list-radio-label radio-label">В2 - Эффективность процедур постановки земельного участка на кадастровый учет и качество территориального планирования</label>
+            </li>
+        </ul>
+        <button class="mark-modal__button js-choose-mark-button js-close-modal button" disabled>Подтвердить</button>
+    </div>
+</div>
 <script type="module" src="js/main.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/inputmask@5.0.9/dist/inputmask.min.js"></script>
 </body>

@@ -94,6 +94,28 @@
     padding: 23px 44px;
 }
 
+.mark-modal__list-item {
+    border-bottom: 1px solid var(--mainColor);
+    padding-bottom: 10px;
+}
+
+.mark-modal__list-item:not(:last-of-type) {
+    margin-bottom: 10px;
+}
+
+.mark-modal__list-radio-label {
+    padding-left: 40px;
+}
+
+.mark-modal__button {
+    font-size: 32px;
+    font-weight: 500;
+    line-height: 41.28px;
+    padding: 10px 15px;
+    margin: 20px auto 0;
+    display: block;
+}
+
 @media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (-o-min-device-pixel-ratio: 2/1), only screen and (min-resolution: 192dpi) {
     .data {
         background: url('/images/form-bg@2x.png') no-repeat center;
@@ -150,7 +172,8 @@
         margin-bottom: 34px;
     }
 
-    .data__form-button {
+    .data__form-button,
+    .mark-modal__button {
         font-size: 26px;
         line-height: 35.28px;
         padding: 18px 35px;
@@ -207,7 +230,8 @@
         margin-bottom: 27px;
     }
 
-    .data__form-button {
+    .data__form-button,
+    .mark-modal__button {
         font-size: 21px;
         line-height: 30.28px;
     }
@@ -277,7 +301,8 @@
         margin-bottom: 22px;
     }
 
-    .data__form-button {
+    .data__form-button,
+    .mark-modal__button {
         font-size: 17px;
         line-height: 26.28px;
         padding: 14px 28px;

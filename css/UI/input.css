@@ -5,6 +5,16 @@
     height: fit-content;
 }
 
+.input-modal {
+    cursor: pointer;
+    transition: 0.1s linear;
+}
+
+.input-modal:hover {
+    -webkit-filter: brightness(0.7);
+    filter: brightness(0.7);
+}
+
 .input-wrapper::after {
     content: 'Обязательное поле';
     display: block;
@@ -71,6 +81,10 @@
     font-weight: 500;
     line-height: 30.96px;
     border: 1px solid transparent;
+}
+
+.input-modal .input {
+    pointer-events: none;
 }
 
 .input:focus {

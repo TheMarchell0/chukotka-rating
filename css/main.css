@@ -8,6 +8,8 @@
 /*UI styles*/
 @import "UI/button.css";
 @import "UI/input.css";
+@import "UI/modal.css";
+@import "UI/radio.css";
 
 /*Main page styles*/
 @import "pages/main/hero.css";
@@ -78,6 +80,10 @@ img {
     clip-path: inset(100%) !important;
     clip: rect(0 0 0 0) !important;
     overflow: hidden !important;
+}
+
+.no-scroll {
+    overflow: hidden;
 }
 
 .container {
