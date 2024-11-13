@@ -9,6 +9,7 @@
     -webkit-transition: 0.2s linear;
     -o-transition: 0.2s linear;
     transition: 0.2s linear;
+    display: block;
 }
 
 a.button {

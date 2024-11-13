@@ -42,6 +42,7 @@ export function createFormValidation() {
         }
 
         function validateInput(input) {
+            const isRequired = input.classList.contains('required');
             const isEmailField = input.classList.contains('js-email-input');
             const isPhoneField = input.classList.contains('js-phone-input');
             const field = input.querySelector('.js-input');
@@ -50,7 +51,7 @@ export function createFormValidation() {
 
             input.classList.remove('error', 'email-error');
 
-            if (isEmpty) {
+            if (isEmpty && isRequired) {
                 input.classList.add('error');
             } else {
                 field.classList.add('touched');

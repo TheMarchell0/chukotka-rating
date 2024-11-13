@@ -15,7 +15,7 @@
     filter: brightness(0.7);
 }
 
-.input-wrapper::after {
+.input-wrapper.required::after {
     content: 'Обязательное поле';
     display: block;
     position: absolute;
@@ -60,6 +60,15 @@
     transition: top 0.3s, font-size 0.3s;
     z-index: 100;
     pointer-events: none;
+}
+
+.required::before {
+    content: '*';
+    position: absolute;
+    top: 10px;
+    right: 30px;
+    color: #c30000;
+    font-size: 20px;
 }
 
 .error .label,
