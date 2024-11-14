@@ -73,6 +73,7 @@
     right: 30px;
     color: #c30000;
     font-size: 24px;
+    z-index: 10;
 }
 
 .error .label,
