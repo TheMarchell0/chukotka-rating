@@ -39,6 +39,10 @@
     content: 'Некорректный телефон';
 }
 
+.input-wrapper.rules-error::after {
+    content: 'Некорректный формат. Обратитесь к инструкции';
+}
+
 .input-wrapper.error::after {
     opacity: 1;
 }
@@ -68,7 +72,7 @@
     top: 10px;
     right: 30px;
     color: #c30000;
-    font-size: 20px;
+    font-size: 24px;
 }
 
 .error .label,
@@ -109,7 +113,7 @@
     background-color: #FFFFFF;
 }
 
-.input:not(:-moz-placeholder-shown):not(:focus) + .label {
+.input:not(:-moz-placeholder-shown):not(:focus) + .label{
     top: 14px;
     font-size: 14px;
 }
@@ -120,7 +124,7 @@
 }
 
 .input:focus + .label,
-.input:not(:placeholder-shown):not(:focus) + .label {
+.input:not(:placeholder-shown):not(:focus) + .label{
     top: 14px;
     font-size: 14px;
 }

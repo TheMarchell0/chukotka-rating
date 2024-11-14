@@ -88,7 +88,9 @@
         <div class="data__container container">
             <div class="data__content content">
                 <h2 class="data__title section-title white">Форма сбора данных</h2>
-                <button class="data__button button js-modal-trigger" data-open-modal="instructions-modal">Инструкция по&nbsp;заполнению формы</button>
+                <button class="data__button button js-modal-trigger" data-open-modal="instructions-modal">Инструкция по&nbsp;заполнению
+                    формы
+                </button>
                 <form class="data__form js-form">
                     <div class="data__form-column">
                         <p class="data__form-column-title">Информация о&nbsp;респонденте</p>
@@ -101,29 +103,38 @@
                             <div class="data__form-column-input-wrapper js-input-wrapper input-wrapper required">
                                 <input class="data__form-column-input js-input input" id="info-region" type="text"
                                        placeholder="">
-                                <label for="info-region" class="data__form-column-label label">Регион местонахождения юрлица</label>
+                                <label for="info-region" class="data__form-column-label label">Регион местонахождения
+                                    юрлица</label>
                             </div>
-                            <div class="data__form-column-input-wrapper js-input-wrapper input-wrapper required">
-                                <input class="data__form-column-input js-input input" id="info-JIPA1" type="text"
-                                       placeholder="">
-                                <label for="info-JIPA1" class="data__form-column-label label">Тип населенного пункта</label>
+                            <div class="data__form-column-input-wrapper js-input-wrapper input-wrapper required" data-input-type="select">
+                                <select class="data__form-column-select select js-select js-input"
+                                        name="Тип населенного пункта">
+                                    <option value="Не выбран" selected>Тип населенного пункта</option>
+                                    <option value="Город">Город</option>
+                                    <option value="Посёлок городского типа">Посёлок городского типа</option>
+                                    <option value="Село">Село</option>
+                                    <option value="Деревня">Деревня</option>
+                                    <option value="Станица">Станица</option>
+                                    <option value="Аул">Аул</option>
+                                </select>
                             </div>
-                            <div class="data__form-column-input-wrapper js-input-wrapper input-wrapper required">
+                            <div class="data__form-column-input-wrapper js-input-wrapper input-wrapper required" data-input-type="localityName">
                                 <input class="data__form-column-input js-input input" id="info-place-name" type="text"
                                        placeholder="">
-                                <label for="info-place-name" class="data__form-column-label label">Наименование населенного&nbsp;пункта</label>
+                                <label for="info-place-name" class="data__form-column-label label">Наименование
+                                    населенного&nbsp;пункта</label>
                             </div>
-                            <div class="data__form-column-input-wrapper js-input-wrapper input-wrapper required">
+                            <div class="data__form-column-input-wrapper js-input-wrapper input-wrapper required" data-input-type="firstLetterUppercase">
                                 <input class="data__form-column-input js-input input" id="info-surname" type="text"
                                        placeholder="">
                                 <label for="info-surname" class="data__form-column-label label">Фамилия</label>
                             </div>
-                            <div class="data__form-column-input-wrapper js-input-wrapper input-wrapper required">
+                            <div class="data__form-column-input-wrapper js-input-wrapper input-wrapper required" data-input-type="firstLetterUppercase">
                                 <input class="data__form-column-input js-input input" id="info-name" type="text"
                                        placeholder="">
                                 <label for="info-name" class="data__form-column-label label">Имя</label>
                             </div>
-                            <div class="data__form-column-input-wrapper js-input-wrapper input-wrapper">
+                            <div class="data__form-column-input-wrapper js-input-wrapper input-wrapper" data-input-type="firstLetterUppercase">
                                 <input class="data__form-column-input js-input input" id="info-patronymic" type="text"
                                        placeholder="">
                                 <label for="info-patronymic" class="data__form-column-label label">Отчество</label>
@@ -133,10 +144,16 @@
                                        placeholder="">
                                 <label for="info-position" class="data__form-column-label label">Должность</label>
                             </div>
-                            <div class="data__form-column-input-wrapper js-input-wrapper input-wrapper required">
-                                <input class="data__form-column-input js-input input" id="info-JIPA2" type="text"
-                                       placeholder="">
-                                <label for="info-JIPA2" class="data__form-column-label label">Тип субъекта предпринимат. деятельности</label>
+                            <div class="data__form-column-input-wrapper js-input-wrapper input-wrapper required" data-input-type="select">
+                                <select class="data__form-column-select select js-select js-input"
+                                        name="Тип субъекта предпринимат. деятельности">
+                                    <option value="Не выбран" selected>Тип субъекта предпринимат. деятельности</option>
+                                    <option value="ИП">ИП</option>
+                                    <option value="ООО">ООО</option>
+                                    <option value="АО (ОАО, ЗАО, ПАО и т.п.)">АО (ОАО, ЗАО, ПАО и т.п.)</option>
+                                    <option value="НКО">НКО</option>
+                                    <option value="ОП">ОП</option>
+                                </select>
                             </div>
                             <div class="data__form-column-input-wrapper js-input-wrapper input-wrapper required">
                                 <input class="data__form-column-input js-input input" id="info-organization-name"
@@ -144,19 +161,26 @@
                                 <label for="info-organization-name" class="data__form-column-label label">Наименование
                                     организации</label>
                             </div>
-                            <div class="data__form-column-input-wrapper js-input-wrapper input-wrapper js-phone-input required">
-                                <input class="data__form-column-input js-input input js-phone-mask" id="info-landline-phone-number"
+                            <div class="data__form-column-input-wrapper js-input-wrapper input-wrapper required"
+                                 data-input-type="phone">
+                                <input class="data__form-column-input js-input input js-phone-mask"
+                                       id="info-landline-phone-number"
                                        type="text"
                                        placeholder="" inputmode="numeric">
-                                <label for="info-landline-phone-number" class="data__form-column-label label">Городской номер телефона</label>
+                                <label for="info-landline-phone-number" class="data__form-column-label label">Городской
+                                    номер телефона</label>
                             </div>
-                            <div class="data__form-column-input-wrapper js-input-wrapper input-wrapper js-phone-input required">
-                                <input class="data__form-column-input js-input input js-phone-mask" id="info-mobile-phone-number"
+                            <div class="data__form-column-input-wrapper js-input-wrapper input-wrapper required"
+                                 data-input-type="phone">
+                                <input class="data__form-column-input js-input input js-phone-mask"
+                                       id="info-mobile-phone-number"
                                        type="text"
                                        placeholder="" inputmode="numeric">
-                                <label for="info-mobile-phone-number" class="data__form-column-label label">Мобильный номер телефона</label>
+                                <label for="info-mobile-phone-number" class="data__form-column-label label">Мобильный
+                                    номер телефона</label>
                             </div>
-                            <div class="data__form-column-input-wrapper js-input-wrapper js-email-input input-wrapper required">
+                            <div class="data__form-column-input-wrapper js-input-wrapper input-wrapper required"
+                                 data-input-type="email">
                                 <input class="data__form-column-input js-input input" id="info-email" type="text"
                                        placeholder="">
                                 <label for="info-email" class="data__form-column-label label">Электронная почта</label>
@@ -172,12 +196,13 @@
                     <div class="data__form-column">
                         <p class="data__form-column-title">Контакты отправителя</p>
                         <div class="data__form-column-inputs">
-                            <div class="data__form-column-input-wrapper js-input-wrapper input-wrapper white required">
+                            <div class="data__form-column-input-wrapper js-input-wrapper input-wrapper white required" data-input-type="firstLetterUppercase">
                                 <input class="data__form-column-input js-input input" id="contacts-name" type="text"
                                        placeholder="">
                                 <label for="contacts-name" class="data__form-column-label label">ФИО</label>
                             </div>
-                            <div class="data__form-column-input-wrapper js-input-wrapper js-phone-input input-wrapper white required">
+                            <div class="data__form-column-input-wrapper js-input-wrapper input-wrapper white required"
+                                 data-input-type="phone">
                                 <input class="data__form-column-input js-input input js-phone-mask" id="contacts-phone"
                                        type="text"
                                        placeholder="" inputmode="numeric">
@@ -280,7 +305,7 @@
 </footer>
 <div class="modal mark-modal js-modal" id="mark-modal">
     <div class="mark-modal__wrapper modal__wrapper">
-        <span class="modal__close js-close-modal">X</span>
+        <span class="mark-modal__close modal__close js-close-modal">X</span>
         <ul class="mark-modal__list">
             <li class="mark-modal__list-item">
                 <input class="mark-modal__list-radio radio js-mark-radio visually-hidden" type="radio"
@@ -432,11 +457,12 @@
 </div>
 <div class="modal instructions-modal js-modal" id="instructions-modal">
     <div class="instructions-modal__wrapper modal__wrapper">
-        <span class="instructions__close js-close-modal">X</span>
-            jopa
+        <span class="instructions__close modal__close js-close-modal">X</span>
+        jopa
     </div>
 </div>
 <script type="module" src="js/main.js"></script>
+<script type="module" src="js/libraries/choices-js/choices.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/inputmask@5.0.9/dist/inputmask.min.js"></script>
 </body>
 </html>

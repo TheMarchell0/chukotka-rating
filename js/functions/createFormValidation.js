@@ -1,10 +1,9 @@
 import {clearMarkRadio} from "./markRadio.js";
+import {firstLetterUppercase, validateEmail, validateLocalityName, validatePhone} from "./validationTypes.js";
+import {clearSelect} from "./createSelect.js";
 
 export function createFormValidation() {
     const forms = document.querySelectorAll('.js-form');
-
-    const phoneRegex = /^(\+7 \(\d{3}\) \d{3}-\d{2}-\d{2})$/,
-        emailRegex = /\S+@\S+\.\S+/;
 
     for (let form of forms) {
         const inputs = form.querySelectorAll('.js-input-wrapper'),
@@ -19,6 +18,7 @@ export function createFormValidation() {
 
             field.addEventListener('change', () => {
                 field.classList.add('touched');
+                validateInput(input);
             });
         });
 
@@ -32,35 +32,33 @@ export function createFormValidation() {
             checkAllFieldsValid();
         });
 
-
-        function validateEmail(email) {
-            return emailRegex.test(email);
-        }
-
-        function validatePhone(phoneInput) {
-            return phoneRegex.test(phoneInput)
-        }
-
         function validateInput(input) {
             const isRequired = input.classList.contains('required');
-            const isEmailField = input.classList.contains('js-email-input');
-            const isPhoneField = input.classList.contains('js-phone-input');
+            const inputType = input.getAttribute('data-input-type');
             const field = input.querySelector('.js-input');
             const value = field.value.trim();
-            const isEmpty = value === '';
+            const isEmpty = inputType === 'select' ? value === 'Не выбран' : value === '';
 
-            input.classList.remove('error', 'email-error');
+            input.classList.remove('error', 'email-error', 'phone-error', 'rules-error');
 
             if (isEmpty && isRequired) {
                 input.classList.add('error');
             } else {
                 field.classList.add('touched');
 
-                if (isEmailField && !validateEmail(value)) {
+                if (inputType === 'firstLetterUppercase' ) {
+                    field.value = firstLetterUppercase(field.value)
+                }
+
+                if (inputType === 'localityName' && !validateLocalityName(value)) {
+                    input.classList.add('error', 'rules-error');
+                }
+
+                if (inputType === 'email' && !validateEmail(value)) {
                     input.classList.add('error', 'email-error');
                 }
 
-                if (isPhoneField && !validatePhone(value)) {
+                if (inputType === 'phone' && !validatePhone(value)) {
                     input.classList.add('error', 'phone-error');
                 }
             }
@@ -68,7 +66,7 @@ export function createFormValidation() {
 
         function checkAllFieldsValid() {
             let allValid = Array.from(inputs).every((input) => {
-                return !input.classList.contains('error') && !input.classList.contains('email-error');
+                return !input.classList.contains('error') && !input.classList.contains('email-error') && !input.classList.contains('phone-error');
             });
 
             if (allValid) {
@@ -85,6 +83,7 @@ export function createFormValidation() {
                 field.classList.remove('touched');
             });
             clearMarkRadio();
+            clearSelect();
         }
     }
 }

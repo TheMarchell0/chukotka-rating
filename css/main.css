@@ -2,6 +2,7 @@
 @import "fonts.css";
 @import "vendor/normalize.css";
 @import "vendor/variables.css";
+@import "vendor/choices-style-reset.css";
 @import "components/header.css";
 @import "components/footer.css";
 
@@ -16,6 +17,9 @@
 @import "pages/main/rating.css";
 @import "pages/main/data.css";
 @import "pages/main/materials.css";
+
+/*Libraries styles*/
+@import "libraries/choices-js/choices.min.css";
 
 
 * {
