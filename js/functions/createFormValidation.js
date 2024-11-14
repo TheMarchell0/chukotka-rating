@@ -66,7 +66,7 @@ export function createFormValidation() {
 
         function checkAllFieldsValid() {
             let allValid = Array.from(inputs).every((input) => {
-                return !input.classList.contains('error') && !input.classList.contains('email-error') && !input.classList.contains('phone-error');
+                return !input.classList.contains('error') && !input.classList.contains('email-error') && !input.classList.contains('phone-error') && !input.classList.contains('rules-error');
             });
 
             if (allValid) {
