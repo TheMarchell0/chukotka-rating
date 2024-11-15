@@ -18,9 +18,9 @@ export function phoneMaskInitialization() {
                 }
             }
 
-            // Если последний номер содержит хотя бы 1 цифру
+            // Если последний номер содержит 11 цифр
             const lastNumber = phoneNumbers[phoneNumbers.length - 1];
-            if (lastNumber.length > 0) {
+            if (lastNumber.length === 11) {
                 if (!isCityPhoneNumber && !value.endsWith(';')) {
                     // Для обычного номера: добавляем пустую строку для следующего номера
                     phoneNumbers.push('');
