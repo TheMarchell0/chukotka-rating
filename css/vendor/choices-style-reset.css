@@ -1,14 +1,15 @@
 .choices {
-    margin-bottom: 0!important;
+    margin-bottom: 0 !important;
+    height: 100% !important;
 }
 
 .choices__inner {
-    border-radius: 61px!important;
-    background-color: #DCE8FF!important;
-    padding: 21px 29px 16px!important;
-    width: 100%!important;
-    border: 1px solid transparent!important;
-    font-size: 24px!important;
+    border-radius: 61px !important;
+    background-color: #DCE8FF !important;
+    padding: 21px 29px 9px !important;
+    width: 100% !important;
+    border: 1px solid transparent !important;
+    font-size: 24px !important;
     font-weight: 500;
     line-height: 30.96px;
     text-align: left;
@@ -16,18 +17,18 @@
 }
 
 .is-open .choices__inner {
-    border-radius: 36px 36px 0 0!Important;
+    border-radius: 36px 36px 0 0 !Important;
 }
 
 .choices__list--single {
-    padding: 0!important;
+    padding: 0 !important;
 }
 
 .choices__list--dropdown {
-    z-index: 1000!important;
+    z-index: 1000 !important;
     border-radius: 0 0 61px 61px !important;
     background-color: #DCE8FF !important;
-    padding: 0px!important;
+    padding: 0px !important;
     width: 100% !important;
     border: 1px solid transparent !important;
     text-align: left;
@@ -39,7 +40,7 @@
     font-size: 24px !important;
     font-weight: 500;
     line-height: 30.96px;
-    padding: 10px 29px!important;
+    padding: 10px 29px !important;
 }
 
 .choices__list--dropdown .choices__item[data-value="Не выбран"] {
@@ -47,14 +48,53 @@
 }
 
 .error .choices__inner {
-    border: 1px solid #c30000!important;
+    border: 1px solid #c30000 !important;
     color: #c30000;
 }
 
-.touched+.choices__list--single {
+.touched + .choices__list--single {
     color: #000000;
 }
 
 .choices[data-type*=select-one]::after {
-    margin-top:initial!important;
+    margin-top: initial !important;
+}
+
+.choices__list--single .choices__item {
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 1;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+@media (max-width: 1920px) {
+    .choices__item,
+    .choices__list--dropdown .choices__item {
+        font-size: 17px !important;
+        line-height: 23.96px !important;
+    }
+}
+
+@media (max-width: 1440px) {
+    .choices__item,
+    .choices__list--dropdown .choices__item {
+        font-size: 14px !important;
+        line-height: 20.96px !important;
+    }
+}
+
+@media (max-width: 767px) {
+    .choices__inner {
+        padding: 11px 22px!important;
+        max-height: 44px;
+    }
+}
+
+@media (max-width: 350px) {
+    .choices__item,
+    .choices__list--dropdown .choices__item {
+        font-size: 12px !important;
+        line-height: 18.96px !important;
+    }
 }

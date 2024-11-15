@@ -22,7 +22,10 @@ const phoneRegex = /^7\d{10}$/,
         "п.гт",
         "пг.т.",
         "поселок городского типа", "посёлок городского типа",
-    ];
+    ],
+    organizationNameWords = ['ип', 'ооо', 'ао', 'оао', 'зао', 'пао', 'нао', 'нко', 'оп'],
+    quotesRegex = /['"`“”‘’«»]/;
+
 
 export function firstLetterUppercase(text) {
     return text
@@ -36,19 +39,26 @@ export function validateEmail(email) {
 }
 
 export function validatePhone(phoneInput) {
-    return phoneRegex.test(phoneInput)
+    return phoneRegex.test(phoneInput);
 }
 
 export function validateLocalityName(locality) {
-    const lowerCaseInput = locality.toLowerCase();
+    return !findBanWords(locality, localityBanWords);
+}
+
+export function validateOrganizationName(text) {
+    return findBanWords(text, organizationNameWords) || quotesRegex.test(text);
+}
+
+function findBanWords(input, wordList) {
+    const lowerCaseInput = input.toLowerCase();
     const words = lowerCaseInput.split(/\s+/);
 
-    for (let localityBanWord of localityBanWords) {
-        const trimmedBanWord = localityBanWord.trim().toLowerCase();
-        if (words.includes(trimmedBanWord)) {
-            return false;
+    for (const word of words) {
+        if (wordList.includes(word.trim())) {
+            return true;
         }
     }
 
-    return true;
+    return false;
 }

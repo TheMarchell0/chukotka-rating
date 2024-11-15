@@ -32,6 +32,9 @@
 }
 
 .data__form-column {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
     border-radius: 48px;
     background: #F1F9FF;
     padding: 46px 44px;
@@ -68,7 +71,7 @@
 }
 
 .data__form-column-input-wrapper:not(:nth-child(7n)) {
-    margin-bottom: 31px;
+    margin-bottom: 32px;
 }
 
 .data__form-column:nth-child(odd) .data__form-column-input-wrapper:nth-child(-n+7) {
@@ -81,7 +84,7 @@
     font-weight: 500;
     line-height: 49.02px;
     color: #7D7D7D;
-    margin-bottom: 24px;
+    margin: 0 auto 24px;
     text-align: center;
 }
 
@@ -133,6 +136,13 @@
         background: url('/images/data-bg@2x.png') no-repeat 0 0;
         background-size: 100%;
     }
+
+    @media (max-width: 1920px) {
+        .data {
+            background: url('/images/data-bg@2x.png') no-repeat center;
+            background-size: cover;
+        }
+    }
 }
 
 @media (max-width: 1920px) {
@@ -171,10 +181,16 @@
         margin-right: 36px;
     }
 
+    .data__form-column:nth-child(odd) .data__form-column-input-wrapper:nth-child(-n+7),
+    .data__form-column:nth-child(odd) .data__form-column-input-wrapper {
+        max-width: initial;
+        width: 20vw;
+    }
+
     .data__form-column-title {
         font-size: 30px;
         line-height: 41.02px;
-        margin-bottom: 34px;
+        margin: 0 auto 34px;
     }
 
     .data__form-button,
@@ -182,6 +198,13 @@
         font-size: 26px;
         line-height: 35.28px;
         padding: 18px 35px;
+    }
+
+    .data__button {
+        margin: 37px auto 56px;
+        padding: 17px 27px;
+        font-size: 26px;
+        line-height: 35.28px;
     }
 }
 
@@ -211,31 +234,39 @@
 
     .data__form-column,
     .data__form-column:nth-child(odd) {
-        padding: 27px 24px;
+        padding: 27px 24px 40px;
     }
 
     .data__form-column:nth-child(odd) {
         -webkit-box-flex: 0;
-        -ms-flex: 0 0 50%;
-        flex: 0 0 50%;
+        -ms-flex: 0 0 60%;
+        flex: 0 0 60%;
         margin-right: 26px;
     }
 
-    .data__form-column:nth-child(odd) .data__form-column-input-wrapper:nth-of-type(odd) {
-        margin-right: initial;
-        -webkit-box-flex: 0;
-        -ms-flex: 0 1 100%;
-        flex: 0 1 100%;
+    .data__form-column:nth-child(odd) .data__form-column-input-wrapper:nth-child(-n+7) {
+        margin-right: 10px;
+    }
+
+    .data__form-column:nth-child(odd) .data__form-column-input-wrapper:nth-child(-n+7), .data__form-column:nth-child(odd) .data__form-column-input-wrapper {
+        width: 50%;
     }
 
     .data__form-column-title {
         font-size: 24px;
         line-height: 35.02px;
-        margin-bottom: 27px;
+        margin: 0 auto 27px;
     }
 
     .data__form-button,
     .mark-modal__button {
+        font-size: 21px;
+        line-height: 30.28px;
+    }
+
+    .data__button {
+        margin: 30px auto 45px;
+        padding: 14px 22px;
         font-size: 21px;
         line-height: 30.28px;
     }
@@ -267,8 +298,24 @@
         margin-bottom: 26px;
     }
 
+    .data__form-column-inputs {
+        margin: 0 auto;
+        width: 100%;
+    }
+
+    .data__form-column-input-wrapper {
+        max-width: initial;
+    }
+
     .data__form-button {
         margin-top: 20px;
+    }
+
+    .data__button {
+        margin: 24px auto 36px;
+        padding: 11px 18px;
+        font-size: 17px;
+        line-height: 26.28px;
     }
 }
 
@@ -288,13 +335,32 @@
     }
 
     .data__form-column, .data__form-column:nth-child(odd) {
-        padding: 22px 20px;
+        padding: 22px 20px 40px;
     }
+
+    .data__form-column-inputs {
+        max-height: initial;
+    }
+
+    .data__form-column:nth-child(odd) .data__form-column-input-wrapper:nth-child(-n+7), .data__form-column:nth-child(odd) .data__form-column-input-wrapper {
+        width: 100%;
+    }
+
+    .data__form-column:nth-child(odd) .data__form-column-input-wrapper:nth-child(-n+7),
+    .data__form-column:nth-child(odd) .data__form-column-input-wrapper:nth-of-type(odd){
+        margin-right: initial;
+    }
+
+    .data__form-column-input-wrapper:not(:last-child),
+    .data__form-column-input-wrapper:not(:nth-child(7n)) {
+        margin-bottom: 30px;
+    }
+
 
     .data__form-column-title {
         font-size: 19px;
         line-height: 30.02px;
-        margin-bottom: 22px;
+        margin: 0 auto 22px;
     }
 
     .data__form-button,
@@ -302,5 +368,12 @@
         font-size: 17px;
         line-height: 26.28px;
         padding: 14px 28px;
+    }
+
+    .data__button {
+        margin: 19px auto 29px;
+        padding: 9px 14px;
+        font-size: 14px;
+        line-height: 23.28px;
     }
 }

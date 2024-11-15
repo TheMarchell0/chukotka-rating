@@ -1,5 +1,5 @@
 import {clearMarkRadio} from "./markRadio.js";
-import {firstLetterUppercase, validateEmail, validateLocalityName, validatePhone} from "./validationTypes.js";
+import {firstLetterUppercase, validateEmail, validateLocalityName, validatePhone, validateOrganizationName} from "./validationTypes.js";
 import {clearSelect} from "./createSelect.js";
 
 export function createFormValidation() {
@@ -48,6 +48,10 @@ export function createFormValidation() {
 
                 if (inputType === 'firstLetterUppercase' ) {
                     field.value = firstLetterUppercase(field.value)
+                }
+
+                if (inputType === 'organizationName' && validateOrganizationName(value)) {
+                    input.classList.add('error', 'rules-error');
                 }
 
                 if (inputType === 'localityName' && !validateLocalityName(value)) {

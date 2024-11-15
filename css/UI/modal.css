@@ -151,6 +151,7 @@
 .instructions-modal__list-types {
     display: flex;
     margin:9px 0px 0px 9px;
+    flex-wrap: wrap;
 }
 
 .instructions-modal__list-types-item {
@@ -236,8 +237,46 @@
     }
 }
 
-@media (max-width: 767px) {
+@media (max-width: 1024px) {
     .modal__wrapper {
-        padding: 60px 20px 20px;
+        max-width: 90%;
+    }
+}
+
+@media (max-width: 767px) {
+
+    .modal__close {
+        right: 10px;
+    }
+
+    .modal__wrapper::-webkit-scrollbar {
+        width: 3px;
+    }
+
+    .modal__wrapper {
+        padding: 40px 20px 20px;
+        border-top: 20px solid #FFFFFF;
+        border-right: 10px solid #FFFFFF;
+        border-radius: 20px;
+    }
+
+    .instructions-modal__title {
+        font-size: 25px;
+        font-weight: 500;
+        line-height: 33.14px;
+    }
+
+    .instructions-modal__list-title {
+        transform: initial;
+        padding: 7px 21px;
+    }
+
+    .instructions-modal__list-types-item {
+        font-size: 14px;
+        line-height: 19.22px;
+    }
+
+    .instructions-modal__notice {
+        margin-top: 20px;
     }
 }
