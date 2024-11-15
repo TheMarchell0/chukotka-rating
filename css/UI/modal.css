@@ -28,22 +28,47 @@
 }
 
 .modal__wrapper {
-    border-radius: 30px;
-    background: #F1F9FF;
+    border-radius: 48px;
+    background: #FFFFFF;
     color: #323232;
-    max-width: 1080px;
+    max-width: 968px;
     width: 100%;
     position: relative;
-    padding: 50px 50px 42px;
+    padding: 32px 50px 18px;
     overflow-y: auto;
     max-height: 100vh;
     -webkit-overflow-scrolling: touch;
+    box-shadow: 0px 17px 37px 0px #0000001A,
+    0px 66px 66px 0px #00000017,
+    0px 149px 90px 0px #0000000D,
+    0px 266px 106px 0px #00000003,
+    0px 415px 116px 0px #00000000;
+    border-top: 51px solid #FFFFFF;
+    border-bottom: 30px solid #FFFFFF;
+    border-right: 21px solid #FFFFFF;
+}
+
+.modal__wrapper::-webkit-scrollbar {
+    width: 11px;
+    background-color: #FFFFFF;
+    border-radius: 10px;
+}
+
+.modal__wrapper::-webkit-scrollbar-thumb {
+    background-color: #EDEDED;
+    border-radius: 10px;
+}
+
+
+.modal__wrapper::-webkit-scrollbar-track {
+    background-color: #FFFFFF;
+    border-radius: 10px;
 }
 
 .modal__close {
     position: absolute;
-    top: 20px;
-    right: 20px;
+    top: 0;
+    right: 30px;
     cursor: pointer;
     -webkit-transition: 0.2s linear;
     -o-transition: 0.2s linear;
@@ -66,6 +91,113 @@
 .modal-anim-close {
     -webkit-animation: closeModalAnim 0.3s ease forwards;
     animation: closeModalAnim 0.3s ease forwards;
+}
+
+.instructions-modal__title {
+    font-size: 32px;
+    font-weight: 500;
+    line-height: 40.14px;
+    letter-spacing: 0.4px;
+    margin-top: -31px;
+    margin-bottom: 32px;
+}
+
+.instructions-modal__title span {
+    text-transform: uppercase;
+    display: block;
+}
+
+.instructions-modal__list-item:not(:last-child) {
+    margin-bottom: 39px;
+}
+
+.instructions-modal__list-item.small:not(:last-child) {
+    margin-bottom: 31px;
+}
+
+.instructions-modal__list-title {
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 23.22px;
+    box-shadow: 0px 1px 3px 0px #575C851A,
+    0px 5px 5px 0px #575C8517,
+    0px 11px 6px 0px #575C850D,
+    0px 19px 8px 0px #575C8503,
+    0px 30px 8px 0px #575C8500;
+    border-radius: 107px;
+    width: fit-content;
+    transform: translateX(-16px);
+    padding: 7px 21px 4px 16px;
+    margin-bottom: 18px;
+}
+
+.instructions-modal__list-item.small .instructions-modal__list-title {
+    font-size: 16px;
+    line-height: 20.64px;
+}
+
+.instructions-modal__list-text {
+    font-size: 18px;
+    font-weight: 300;
+    line-height: 23.22px;
+    margin-left: 15px;
+}
+
+.instructions-modal__list-item.small .instructions-modal__list-text {
+    font-size: 16px;
+    line-height: 22px;
+}
+
+.instructions-modal__list-types {
+    display: flex;
+    margin:9px 0px 0px 9px;
+}
+
+.instructions-modal__list-types-item {
+    width: fit-content;
+    padding: 6px 20px;
+    border-radius: 107px;
+    font-size: 18px;
+    font-weight: 300;
+    line-height: 23.22px;
+    background-color: #ECECEE;
+    margin-bottom: 15px;
+}
+
+.instructions-modal__list-types-item:not(:last-child) {
+    margin-right: 15px;
+}
+
+.instructions-modal__list-types.gradient .instructions-modal__list-types-item:nth-child(1) {
+    background-color: #CCD7FF;
+}
+
+.instructions-modal__list-types.gradient .instructions-modal__list-types-item:nth-child(2) {
+    background-color: #DCE4FF;
+}
+
+.instructions-modal__list-types.gradient .instructions-modal__list-types-item:nth-child(3) {
+    background-color: #E7ECFF;
+}
+
+.instructions-modal__list-types.gradient .instructions-modal__list-types-item:nth-child(4) {
+    background-color: #EDF1FF;
+}
+
+.instructions-modal__list-types.gradient .instructions-modal__list-types-item:nth-child(5) {
+    background-color: #F4F6FF;
+}
+
+.instructions-modal__list-types.gradient .instructions-modal__list-types-item:nth-child(n+6) {
+    background-color: #FFFFFF;
+}
+
+.instructions-modal__notice {
+    font-size: 16px;
+    letter-spacing: 0.3px;
+    line-height: 22px;
+    font-weight: 500;
+    margin-top: 39px;
 }
 
 @-webkit-keyframes openModalAnim {

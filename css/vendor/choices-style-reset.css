@@ -54,3 +54,7 @@
 .touched+.choices__list--single {
     color: #000000;
 }
+
+.choices[data-type*=select-one]::after {
+    margin-top:initial!important;
+}
