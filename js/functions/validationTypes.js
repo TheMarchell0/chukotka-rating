@@ -1,5 +1,5 @@
 const phoneRegex = /^7\d{10}$/,
-    emailRegex = /\S+@\S+\.\S+/,
+    emailRegex = /^(?!.*\.\.)([^\s,()'"$$\]{}<>+:=/\/]+@[^\s,()'"\[$${}<>+:=/\/]+\.[^\s,()'"\[\]{}<>+:=/\/]+)$/,
     localityBanWords = [
         "г.", "г", "город",
         "с.", "с", "село", "станица",
@@ -34,12 +34,28 @@ export function firstLetterUppercase(text) {
         .join(' ');
 }
 
-export function validateEmail(email) {
-    return emailRegex.test(email);
+export function validateEmail(emails) {
+    const emailList = emails.split(';').map(email => email.trim());
+
+    for (const email of emailList) {
+        if (!emailRegex.test(email)) {
+            return false; // Если хотя бы один email невалидный, возвращаем false
+        }
+    }
+
+    return true; // Все email-адреса валидны
 }
 
-export function validatePhone(phoneInput) {
-    return phoneRegex.test(phoneInput);
+export function validatePhone(phones) {
+    const phoneList = phones.split(';').map(phone => phone.trim());
+
+    for (const phone of phoneList) {
+        if (!phoneRegex.test(phone)) {
+            return false;
+        }
+    }
+
+    return true;
 }
 
 export function validateLocalityName(locality) {

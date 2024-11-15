@@ -14,7 +14,6 @@
     <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
     <link rel="manifest" href="/site.webmanifest">
     <link rel="stylesheet" href="css/main.css"/>
-    <link href="https://cdn.jsdelivr.net/npm/inputmask@5.0.9/dist/colormask.min.css" rel="stylesheet">
 </head>
 <body>
 <header class="header js-header">
@@ -106,7 +105,8 @@
                                 <label for="info-region" class="data__form-column-label label">Регион местонахождения
                                     юрлица</label>
                             </div>
-                            <div class="data__form-column-input-wrapper js-input-wrapper input-wrapper required" data-input-type="select">
+                            <div class="data__form-column-input-wrapper js-input-wrapper input-wrapper required"
+                                 data-input-type="select">
                                 <select class="data__form-column-select select js-select js-input"
                                         name="Тип населенного пункта">
                                     <option value="Не выбран" selected>Тип населенного пункта</option>
@@ -118,23 +118,27 @@
                                     <option value="Аул">Аул</option>
                                 </select>
                             </div>
-                            <div class="data__form-column-input-wrapper js-input-wrapper input-wrapper required" data-input-type="localityName">
+                            <div class="data__form-column-input-wrapper js-input-wrapper input-wrapper required"
+                                 data-input-type="localityName">
                                 <input class="data__form-column-input js-input input" id="info-place-name" type="text"
                                        placeholder="">
                                 <label for="info-place-name" class="data__form-column-label label">Наименование
                                     населенного&nbsp;пункта</label>
                             </div>
-                            <div class="data__form-column-input-wrapper js-input-wrapper input-wrapper required" data-input-type="firstLetterUppercase">
+                            <div class="data__form-column-input-wrapper js-input-wrapper input-wrapper required"
+                                 data-input-type="firstLetterUppercase">
                                 <input class="data__form-column-input js-input input" id="info-surname" type="text"
                                        placeholder="">
                                 <label for="info-surname" class="data__form-column-label label">Фамилия</label>
                             </div>
-                            <div class="data__form-column-input-wrapper js-input-wrapper input-wrapper required" data-input-type="firstLetterUppercase">
+                            <div class="data__form-column-input-wrapper js-input-wrapper input-wrapper required"
+                                 data-input-type="firstLetterUppercase">
                                 <input class="data__form-column-input js-input input" id="info-name" type="text"
                                        placeholder="">
                                 <label for="info-name" class="data__form-column-label label">Имя</label>
                             </div>
-                            <div class="data__form-column-input-wrapper js-input-wrapper input-wrapper" data-input-type="firstLetterUppercase">
+                            <div class="data__form-column-input-wrapper js-input-wrapper input-wrapper"
+                                 data-input-type="firstLetterUppercase">
                                 <input class="data__form-column-input js-input input" id="info-patronymic" type="text"
                                        placeholder="">
                                 <label for="info-patronymic" class="data__form-column-label label">Отчество</label>
@@ -144,7 +148,8 @@
                                        placeholder="">
                                 <label for="info-position" class="data__form-column-label label">Должность</label>
                             </div>
-                            <div class="data__form-column-input-wrapper js-input-wrapper input-wrapper required" data-input-type="select">
+                            <div class="data__form-column-input-wrapper js-input-wrapper input-wrapper required"
+                                 data-input-type="select">
                                 <select class="data__form-column-select select js-select js-input"
                                         name="Тип субъекта предпринимат. деятельности">
                                     <option value="Не выбран" selected>Тип субъекта предпринимат. деятельности</option>
@@ -155,7 +160,8 @@
                                     <option value="ОП">ОП</option>
                                 </select>
                             </div>
-                            <div class="data__form-column-input-wrapper js-input-wrapper input-wrapper required" data-input-type="organizationName">
+                            <div class="data__form-column-input-wrapper js-input-wrapper input-wrapper required"
+                                 data-input-type="organizationName">
                                 <input class="data__form-column-input js-input input" id="info-organization-name"
                                        type="text" placeholder="">
                                 <label for="info-organization-name" class="data__form-column-label label">Наименование
@@ -163,7 +169,7 @@
                             </div>
                             <div class="data__form-column-input-wrapper js-input-wrapper input-wrapper required"
                                  data-input-type="phone">
-                                <input class="data__form-column-input js-input input js-phone-mask"
+                                <input class="data__form-column-input js-input input js-phone-mask js-city-phone-number"
                                        id="info-landline-phone-number"
                                        type="text"
                                        placeholder="" inputmode="numeric">
@@ -196,7 +202,8 @@
                     <div class="data__form-column">
                         <p class="data__form-column-title">Контакты отправителя</p>
                         <div class="data__form-column-inputs">
-                            <div class="data__form-column-input-wrapper js-input-wrapper input-wrapper white required" data-input-type="firstLetterUppercase">
+                            <div class="data__form-column-input-wrapper js-input-wrapper input-wrapper white required"
+                                 data-input-type="firstLetterUppercase">
                                 <input class="data__form-column-input js-input input" id="contacts-name" type="text"
                                        placeholder="">
                                 <label for="contacts-name" class="data__form-column-label label">ФИО</label>
@@ -458,11 +465,13 @@
 <div class="modal instructions-modal js-modal" id="instructions-modal">
     <div class="instructions-modal__wrapper modal__wrapper">
         <span class="instructions__close modal__close js-close-modal">X</span>
-        <p class="instructions-modal__title"><span>Инструкция</span> по заполнению списка респондентов для&nbsp;Национального рейтинга 2024&nbsp;года</p>
+        <p class="instructions-modal__title"><span>Инструкция</span> по заполнению списка респондентов для&nbsp;Национального
+            рейтинга 2024&nbsp;года</p>
         <ul class="instructions-modal__list">
             <li class="instructions-modal__list-item">
                 <p class="instructions-modal__list-title">1. Субъект РФ</p>
-                <p class="instructions-modal__list-text">Укажите регион, где респондент получал услугу. (Для всех — одно значение).</p>
+                <p class="instructions-modal__list-text">Укажите регион, где респондент получал услугу. (Для всех — одно
+                    значение).</p>
             </li>
             <li class="instructions-modal__list-item">
                 <p class="instructions-modal__list-title">2. Регион местонахождения юрлица</p>
@@ -509,18 +518,21 @@
             </li>
             <li class="instructions-modal__list-item small">
                 <p class="instructions-modal__list-title">9. Мобильный номер телефона</p>
-                <p class="instructions-modal__list-text">Начинается с «7», 11 цифр, без пробелов и символов (например, 79101234567).</p>
+                <p class="instructions-modal__list-text">Начинается с «7», 11 цифр, без пробелов и символов (например,
+                    79101234567).</p>
                 <p class="instructions-modal__list-text">Несколько номеров через «;».</p>
             </li>
             <li class="instructions-modal__list-item small">
                 <p class="instructions-modal__list-title">10. Городской номер телефона</p>
                 <p class="instructions-modal__list-text">Начинается с «7» + код города, без пробелов и символов.</p>
                 <p class="instructions-modal__list-text">Несколько номеров через «;».</p>
-                <p class="instructions-modal__list-text">Добавочный номер указывайте в скобках после основного (например, 74951234567(123)).</p>
+                <p class="instructions-modal__list-text">Добавочный номер указывайте в скобках после основного
+                    (например, 74951234567(123)).</p>
             </li>
             <li class="instructions-modal__list-item small">
                 <p class="instructions-modal__list-title">11. Электронная почта</p>
-                <p class="instructions-modal__list-text">Формат: стандартный, без пробелов и специальных символов (например, **@**, **..**, **+** и т. д.).</p>
+                <p class="instructions-modal__list-text">Формат: стандартный, без пробелов и специальных символов
+                    (например, **@**, **..**, **+** и т. д.).</p>
                 <p class="instructions-modal__list-text">Несколько адресов через «;».</p>
             </li>
         </ul>

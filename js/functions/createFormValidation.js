@@ -59,7 +59,7 @@ export function createFormValidation() {
                 }
 
                 if (inputType === 'email' && !validateEmail(value)) {
-                    input.classList.add('error', 'email-error');
+                    input.classList.add('error', 'rules-error');
                 }
 
                 if (inputType === 'phone' && !validatePhone(value)) {
