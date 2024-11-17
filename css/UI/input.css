@@ -32,14 +32,6 @@
     transition: 0.2s linear;
 }
 
-.input-wrapper.email-error::after {
-    content: 'Некорректный email';
-}
-
-.input-wrapper.phone-error::after {
-    content: 'Некорректный телефон';
-}
-
 .input-wrapper.rules-error::after {
     content: 'Некорректный формат. Обратитесь к инструкции';
 }

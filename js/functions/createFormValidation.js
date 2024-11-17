@@ -1,21 +1,24 @@
 import {clearMarkRadio} from "./markRadio.js";
-import {firstLetterUppercase, validateEmail, validateLocalityName, validatePhone, validateOrganizationName} from "./validationTypes.js";
+import {
+    firstLetterUppercase,
+    validateEmail,
+    validateLocalityName,
+    validatePhone,
+    validateOrganizationName
+} from "./validationTypes.js";
 import {clearSelect} from "./createSelect.js";
 
 export function createFormValidation() {
     const forms = document.querySelectorAll('.js-form');
 
-    for (let form of forms) {
-        const inputs = form.querySelectorAll('.js-input-wrapper'),
-            submitButton = form.querySelector('.js-submit-button');
+    forms.forEach(form => {
+        const inputs = form.querySelectorAll('.js-input-wrapper');
+        const submitButton = form.querySelector('.js-submit-button');
 
-        inputs.forEach((input) => {
+        inputs.forEach(input => {
             const field = input.querySelector('.js-input');
 
-            field.addEventListener('input', () => {
-                validateInput(input);
-            });
-
+            field.addEventListener('input', () => validateInput(input));
             field.addEventListener('change', () => {
                 field.classList.add('touched');
                 validateInput(input);
@@ -24,70 +27,80 @@ export function createFormValidation() {
 
         submitButton.addEventListener('click', (e) => {
             e.preventDefault();
-
-            inputs.forEach(input => {
-                validateInput(input);
-            });
-
-            checkAllFieldsValid();
+            validateAllInputs(inputs);
+            checkAllFieldsValid(inputs);
         });
+    });
+}
 
-        function validateInput(input) {
-            const isRequired = input.classList.contains('required');
-            const inputType = input.getAttribute('data-input-type');
-            const field = input.querySelector('.js-input');
-            const value = field.value.trim();
-            const isEmpty = inputType === 'select' ? value === 'Не выбран' : value === '';
+function validateInput(input) {
+    const field = input.querySelector('.js-input');
+    const value = field.value.trim();
+    const isRequired = input.classList.contains('required');
+    const inputType = input.getAttribute('data-input-type');
+    const isEmpty = inputType === 'select' ? value === 'Не выбран' : value === '';
 
-            input.classList.remove('error', 'email-error', 'phone-error', 'rules-error');
+    clearErrorClasses(input);
 
-            if (isEmpty && isRequired) {
-                input.classList.add('error');
-            } else {
-                field.classList.add('touched');
+    if (isEmpty && isRequired) {
+        input.classList.add('error');
+    } else {
+        field.classList.add('touched');
+        handleInputValidation(input, inputType, value);
+    }
+}
 
-                if (inputType === 'firstLetterUppercase' ) {
-                    field.value = firstLetterUppercase(field.value)
-                }
+function clearErrorClasses(input) {
+    input.classList.remove('error', 'email-error', 'phone-error', 'rules-error');
+}
 
-                if (inputType === 'organizationName' && validateOrganizationName(value)) {
-                    input.classList.add('error', 'rules-error');
-                }
+function handleInputValidation(input, inputType, value) {
+    const field = input.querySelector('.js-input');
 
-                if (inputType === 'localityName' && !validateLocalityName(value)) {
-                    input.classList.add('error', 'rules-error');
-                }
+    if (inputType === 'firstLetterUppercase') {
+        const newValue = firstLetterUppercase(value);
 
-                if (inputType === 'email' && !validateEmail(value)) {
-                    input.classList.add('error', 'rules-error');
-                }
-
-                if (inputType === 'phone' && !validatePhone(value)) {
-                    input.classList.add('error', 'phone-error');
-                }
-            }
-        }
-
-        function checkAllFieldsValid() {
-            let allValid = Array.from(inputs).every((input) => {
-                return !input.classList.contains('error') && !input.classList.contains('email-error') && !input.classList.contains('phone-error') && !input.classList.contains('rules-error');
-            });
-
-            if (allValid) {
-                alert('Функционал отправки формы находится в разработке.')
-                clearFormFields();
-                // TODO: Здесь доделать функционал отправки формы в Битрикс.
-            }
-        }
-
-        function clearFormFields() {
-            inputs.forEach((input) => {
-                const field = input.querySelector('.js-input');
-                field.value = '';
-                field.classList.remove('touched');
-            });
-            clearMarkRadio();
-            clearSelect();
+        // Проверяем, изменилось ли значение
+        if (newValue !== value) {
+            field.value = newValue; // Обновляем только если значение изменилось
         }
     }
+
+    const validationRules = {
+        organizationName: validateOrganizationName,
+        localityName: validateLocalityName,
+        email: validateEmail,
+        phone: (val) => validatePhone(val, field.classList.contains('js-city-phone-number')),
+    };
+
+    const validate = validationRules[inputType];
+
+    if (validate && !validate(value)) {
+        input.classList.add('error', 'rules-error');
+    }
+}
+
+
+function validateAllInputs(inputs) {
+    inputs.forEach(input => validateInput(input));
+}
+
+function checkAllFieldsValid(inputs) {
+    const allValid = Array.from(inputs).every(input => !input.classList.contains('error'));
+
+    if (allValid) {
+        alert('Функционал отправки формы находится в разработке.');
+        clearFormFields(inputs);
+        // TODO: Здесь доделать функционал отправки формы в Битрикс.
+    }
+}
+
+function clearFormFields(inputs) {
+    inputs.forEach(input => {
+        const field = input.querySelector('.js-input');
+        field.value = '';
+        field.classList.remove('touched');
+    });
+    clearMarkRadio();
+    clearSelect();
 }

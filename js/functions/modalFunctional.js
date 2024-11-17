@@ -10,7 +10,6 @@ export function modalFunctional() {
         triggerButton.addEventListener('click', () => {
             const modalId = triggerButton.getAttribute('data-open-modal');
             const modal = document.querySelector(`#${modalId}`);
-            console.log(modal)
             openModal(modal);
         });
     });
