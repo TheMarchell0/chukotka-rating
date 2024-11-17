@@ -1,7 +1,4 @@
-const phoneRegex = /^7\d{10}$/,
-    cityPhoneRegex = /^7\d{10}(\(\d+\))?$/,
-    emailRegex = /^(?!.*\.\.)([^\s,()'"$\]{}<>+:=/\/]+@[^\s,()'"\[${}<>+:=/\/]+\.[^\s,()'"\[\]{}<>+:=/\/]+)$/,
-    quotesRegex = /['"`“”‘’«»]/;
+import {phoneRegex, cityPhoneRegex, emailRegex, quotesRegex} from "../helpers/regex.js";
 
 const localityBanWords = new Set([
     "г.", "г", "город",

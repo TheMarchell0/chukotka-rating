@@ -18,10 +18,18 @@ export function createFormValidation() {
         inputs.forEach(input => {
             const field = input.querySelector('.js-input');
 
-            field.addEventListener('input', () => validateInput(input));
+            field.addEventListener('input', () => {
+                setTimeout(()=> {
+                    if (field.value) {
+                        validateInput(input)
+                    }
+                }, 100)
+            });
             field.addEventListener('change', () => {
-                field.classList.add('touched');
-                validateInput(input);
+                setTimeout(()=> {
+                    field.classList.add('touched');
+                    validateInput(input)
+                }, 100)
             });
         });
 
@@ -60,9 +68,8 @@ function handleInputValidation(input, inputType, value) {
     if (inputType === 'firstLetterUppercase') {
         const newValue = firstLetterUppercase(value);
 
-        // Проверяем, изменилось ли значение
         if (newValue !== value) {
-            field.value = newValue; // Обновляем только если значение изменилось
+            field.value = newValue;
         }
     }
 
@@ -89,9 +96,9 @@ function checkAllFieldsValid(inputs) {
     const allValid = Array.from(inputs).every(input => !input.classList.contains('error'));
 
     if (allValid) {
+        // TODO: Здесь доделать функционал отправки формы в Битрикс. Убрать alert ниже.
         alert('Функционал отправки формы находится в разработке.');
         clearFormFields(inputs);
-        // TODO: Здесь доделать функционал отправки формы в Битрикс.
     }
 }
 
