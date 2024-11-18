@@ -18,18 +18,10 @@ export function createFormValidation() {
         inputs.forEach(input => {
             const field = input.querySelector('.js-input');
 
-            field.addEventListener('input', () => {
-                setTimeout(()=> {
-                    if (field.value) {
-                        validateInput(input)
-                    }
-                }, 100)
-            });
+            field.addEventListener('input', () => validateInput(input));
             field.addEventListener('change', () => {
-                setTimeout(()=> {
-                    field.classList.add('touched');
-                    validateInput(input)
-                }, 100)
+                field.classList.add('touched');
+                validateInput(input);
             });
         });
 
