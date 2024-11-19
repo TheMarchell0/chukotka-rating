@@ -14,6 +14,7 @@
     line-height: 30.96px;
     text-align: left;
     color: #00000054;
+    height: 100%!important;
 }
 
 .is-open .choices__inner {
@@ -22,6 +23,9 @@
 
 .choices__list--single {
     padding: 0 !important;
+    height: 100%;
+    display: flex !important;
+    align-items: center;
 }
 
 .choices__list--dropdown {
@@ -87,7 +91,6 @@
 @media (max-width: 767px) {
     .choices__inner {
         padding: 11px 22px!important;
-        max-height: 44px;
     }
 }
 
