@@ -107,18 +107,7 @@
     background-color: #FFFFFF;
 }
 
-.input:not(:-moz-placeholder-shown):not(:focus) + .label{
-    top: 14px;
-    font-size: 14px;
-}
-
-.input:not(:-ms-input-placeholder):not(:focus) + .label {
-    top: 14px;
-    font-size: 14px;
-}
-
-.input:focus + .label,
-.input:not(:placeholder-shown):not(:focus) + .label{
+.label.active {
     top: 14px;
     font-size: 14px;
 }
@@ -146,18 +135,8 @@
         max-width: 76%;
     }
 
-    .input:not(:-moz-placeholder-shown):not(:focus) + .label{
-        font-size: 10px;
-        max-width: 100%;
-    }
 
-    .input:not(:-ms-input-placeholder):not(:focus) + .label {
-        font-size: 10px;
-        max-width: 100%;
-    }
-
-    .input:focus + .label,
-    .input:not(:placeholder-shown):not(:focus) + .label{
+    .label.active {
         font-size: 10px;
         max-width: 100%;
     }
@@ -180,17 +159,8 @@
         line-height: 21.96px;
     }
 
-    .input:not(:-moz-placeholder-shown):not(:focus) + .label {
-        top: 10px;
-        font-size: 10px;
-    }
 
-    .input:not(:-ms-input-placeholder):not(:focus) + .label {
-        top: 10px;
-        font-size: 10px;
-    }
-
-    .input:focus + .label, .input:not(:placeholder-shown):not(:focus) + .label {
+    .label.active {
         top: 10px;
         font-size: 10px;
     }

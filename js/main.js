@@ -7,12 +7,14 @@ import {phoneMaskInitialization} from "./functions/phoneMaskInitialization.js";
 import {modalFunctional} from "./functions/modalFunctional.js";
 import {chooseMarkRadio} from "./functions/markRadio.js";
 import {createSelect} from "./functions/createSelect.js";
+import {createInputPlaceholderActivity} from "./functions/createInputPlaceholderActivity.js";
 
 document.addEventListener("DOMContentLoaded", function () {
     fixedHeaderFunctional();
     createMobileMenu();
     createAnchorsFunctional();
     createSelect();
+    createInputPlaceholderActivity();
     createFormValidation();
     phoneMaskInitialization();
     modalFunctional();
