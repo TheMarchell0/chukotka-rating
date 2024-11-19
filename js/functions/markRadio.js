@@ -1,6 +1,7 @@
-const radios = document.querySelectorAll('.js-mark-radio'),
-    button = document.querySelector('.js-choose-mark-button'),
-    markInput = document.querySelector('.js-mark-input-wrapper');
+const markInput = document.querySelector('.js-mark-input-wrapper'),
+    markLabel = markInput.querySelector('.label'),
+    radios = document.querySelectorAll('.js-mark-radio'),
+    button = document.querySelector('.js-choose-mark-button');
 
 export function chooseMarkRadio() {
     for (let radio of radios) {
@@ -23,6 +24,7 @@ export function clearMarkRadio() {
             break;
         }
     }
+    markLabel.classList.remove('active');
     button.setAttribute('disabled', true);
 }
 
@@ -33,6 +35,7 @@ export function insertMarkRadio() {
                 markInput.classList.remove('error');
             }
             markInput.querySelector('.js-input').value = radio.value;
+            markLabel.classList.add('active');
             break;
         }
     }
