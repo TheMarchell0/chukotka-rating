@@ -14,7 +14,7 @@ export function createInputPlaceholderActivity() {
                 if (input.value === '') {
                     label.classList.remove('active');
                 } else {
-                    label.classList.add('active'); // Если есть текст, оставляем класс active
+                    label.classList.add('active');
                 }
             });
         }
@@ -24,6 +24,7 @@ export function createInputPlaceholderActivity() {
 
 /*
 СМЫСЛ ФУНКЦИИ:
-На MacOS стили для лейбла, который имитирует placeholder
-и поднимается вверх при фокусе на инпут (input:not(:placeholder-shown) + .label),
-не работают вообще/частично. Поэтому данный функционал лейбла-плейсхолдера реализован через эту функцию*/
+На MacOS частично/полностью не работают стили на подобии "input:not(:placeholder-shown) + .label"
+т.е. для лейбла, который имитирует placeholder и поднимается вверх при фокусе на инпут.
+Поэтому данный функционал лейбла-плейсхолдера реализован через эту функцию
+*/
