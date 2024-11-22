@@ -97,8 +97,12 @@ function checkAllFieldsValid(inputs) {
 function clearFormFields(inputs) {
     inputs.forEach(input => {
         const field = input.querySelector('.js-input');
+        const label = input.querySelector('.label');
         field.value = '';
         field.classList.remove('touched');
+        if (label && label.classList.contains('active')) {
+            label.classList.remove('active')
+        }
     });
     clearMarkRadio();
     clearSelect();
